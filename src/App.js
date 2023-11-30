@@ -1,12 +1,29 @@
+import React, { useEffect, useState } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import './assets/style/global.scss';
 import syncIcon from './assets/img/arrows-rotate-solid.svg';
 
 function App() {
+  const [charSet, setcharSet] = useState("abcdefghijklmnopqrstuvwxyz");
+  const [password, setPassword] = useState("");
+
+  useEffect(()=> {
+    generatePassword();
+  }, [])
 
   const generatePassword = () => {
-    console.log("test");
+    let length = 10;
+    const charSet = "abcdefghijklmnopqrstuvwxyz";
+    const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charNumberSet = "0123456789";
+    const charCharacterSet = "!@#$%^&";
+    let retVal = "";
+    // id ? (length = id) : length = parseInt(range.value);
+    for (var i = 0, n = charSet.length; i < length; ++i) {
+      retVal += charSet.charAt(Math.floor(Math.random() * n));
+    }
+    setPassword(retVal);
   }
 
   const copyClipboard = () => {
@@ -17,7 +34,7 @@ function App() {
     <div className="App">
       <Header />
       <section className="generate-password">
-        <input type="text" />
+        <input type="text" value={password} />
         <button onClick={() => generatePassword()}>
           <img src={syncIcon} alt="syncicon" />
         </button>
