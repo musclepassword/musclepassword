@@ -27,11 +27,15 @@ header {
         font-size: 20px;
     }
 
-    button {
+    .button-transparent {
         background-color: transparent;
         border: transparent;
         position: relative;
         right: 30px;
+        cursor: pointer;
+    }
+
+    button {
         cursor: pointer;
     }
 }

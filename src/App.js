@@ -27,7 +27,8 @@ function App() {
   }
 
   const copyClipboard = () => {
-
+    navigator.clipboard.writeText(password);
+    console.log("Copied the text: " + password);
   }
 
   return (
@@ -35,8 +36,11 @@ function App() {
       <Header />
       <section className="generate-password">
         <input type="text" value={password} />
-        <button onClick={() => generatePassword()}>
+        <button className="button-transparent" onClick={() => generatePassword()}>
           <img src={syncIcon} alt="syncicon" />
+        </button>
+        <button onClick={() => copyClipboard()}>
+          copy
         </button>
       </section>
       <section className="who-password">
