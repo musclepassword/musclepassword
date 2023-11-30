@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 80px 40px;
+}
+
+.generate-password {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    input {
+        position: relative;
+        padding: 0 70px 0 25px;
+        width: 500px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    button {
+        background-color: transparent;
+        border: transparent;
+        position: relative;
+        right: 30px;
+        cursor: pointer;
+    }
+}
+
+footer {
+    background-color: #0d1117;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 80px 40px;
+}
