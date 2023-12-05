@@ -8,7 +8,7 @@ function App() {
   const [charSet, setcharSet] = useState("abcdefghijklmnopqrstuvwxyz");
   const [password, setPassword] = useState("");
 
-  useEffect(()=> {
+  useEffect(() => {
     generatePassword();
   }, [])
 
@@ -35,17 +35,27 @@ function App() {
     <div className="App">
       <Header />
       <section className="generate-password">
-        <input type="text" value={password} />
-        <button className="button-transparent" onClick={() => generatePassword()}>
-          <img src={syncIcon} alt="syncicon" />
-        </button>
-        <button onClick={() => copyClipboard()}>
-          copy
-        </button>
+        <div>
+          <input className="input-text" type="text" value={password} />
+          <button className="button-transparent" onClick={() => generatePassword()}>
+            <img src={syncIcon} alt="syncicon" />
+          </button>
+          <button onClick={() => copyClipboard()}>
+            copy
+          </button>
+        </div>
+        <div>
+          <input type="checkbox" className="checkbox" name="vehicle1" value="A-Z" />
+          <label for="vehicle1"> A - Z </label>
+          <input type="checkbox" defaultChecked={true} className="checkbox" name="vehicle1" value="a-z" />
+          <label for="vehicle1"> a - z </label>
+          <input type="checkbox" id="number" className="checkbox" name="number" value="0-9" />
+          <label for="number"> 0 - 9 </label>
+        </div>
       </section>
-      <section className="who-password">
+      {/* <section className="who-password">
         <h1>What is a random password generator?</h1>
-      </section>
+      </section> */}
       <Footer />
     </div>
   );
