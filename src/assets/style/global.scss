@@ -8,17 +8,23 @@ a {
 }
 
 header {
-    background-color: #1d1d22;
-    color: #fff;
+    // background-color: #1d1d22;
+    color: #1d1d22;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 50px 40px;
+    padding: 50px 0px;
+    height: 300px;
+}
+
+.container {
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .generate-password {
-    background-color: #1d1d22;
-    color: #fff;
+    // background-color: #1d1d22;
+    color: #1d1d22;
     justify-content: center;
     align-items: center;
     display: grid;
@@ -54,11 +60,11 @@ header {
         cursor: pointer;
     }
 
-    label{
+    label {
         user-select: none;
     }
 
-    .checkbox{
+    .checkbox {
         border-radius: 25px;
         padding: 60px;
         width: 25px;
@@ -66,16 +72,47 @@ header {
         color: #1d1d22;
     }
 
-    label{
+    label {
         font-size: 25px;
     }
 }
 
-footer {
-    background-color: #0d1117;
+.about-generate-password {
+    background-color: #2a2a33;
     color: #fff;
+    padding: 100px;
+
+    h1{
+        font-size: 45px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .box-inclusive{
+        display: flex;
+
+        .box{
+            width: 350px;
+            padding: 0px 20px;
+
+            h2{
+                font-size: 25px;
+                padding-bottom: 10px;
+            }
+        
+            img{
+                width: 30px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    // background-color: #0d1117;
+    color: #1d1d22;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 80px 40px;
+    padding: 80px 0px;
 }
