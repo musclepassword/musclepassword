@@ -28,53 +28,90 @@ header {
     justify-content: center;
     align-items: center;
     display: grid;
+    padding: 100px 0px;
 
-    .input-text {
-        background-color: #2a2a33;
-        color: #fff;
-        position: relative;
-        padding: 0 70px 0 25px;
-        width: 500px;
-        height: 50px;
-        font-size: 20px;
-        border-radius: 25px;
-        border: none;
+    .input-range {
+        justify-content: center;
+        display: grid;
+        align-items: center;
+
+        label {
+            text-align: center;
+        }
+
+        input {
+            width: 520px;
+            padding: 50px 0px;
+        }
     }
 
-    .button-transparent {
-        background-color: transparent;
-        border: transparent;
+    .input-password {
+        width: 100%;
+        border: 1px solid #eee;
+        margin: 0 auto;
+        display: block;
+        border-radius: 15px;
+        padding-left: 10px;
         position: relative;
-        right: 100px;
-        cursor: pointer;
-    }
+        overflow: hidden;
+        box-shadow: 0 3px 9px #0000000F;
 
-    button {
-        position: relative;
-        right: 110px;
-        padding: 17px 25px;
-        border-radius: 25px;
-        background-color: #fff;
-        border: none;
-        color: #000;
-        cursor: pointer;
+        .input-text {
+            color: #2a2a33;
+            position: relative;
+            padding: 0 20px;
+            width: 500px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 15px;
+            border: none;
+        }
+    
+        .button-transparent {
+            position: relative;
+            cursor: pointer;
+        }
+    
+        button {
+            background-color: transparent;
+            position: relative;
+            padding: 27px 15px;
+            border: none;
+            cursor: pointer;
+    
+            img {
+                width: 30px;
+            }
+        }
     }
 
     label {
         user-select: none;
-    }
-
-    .checkbox {
-        border-radius: 25px;
-        padding: 60px;
-        width: 25px;
-        height: 25px;
-        color: #1d1d22;
-    }
-
-    label {
         font-size: 25px;
     }
+
+    .char-checkbox {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        margin-top: 70px;
+
+        label {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .checkbox {
+            color: #1d1d22;
+            border-radius: 25px;
+            padding: 60px;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+    }
+
 }
 
 .about-generate-password {
@@ -82,25 +119,25 @@ header {
     color: #fff;
     padding: 100px;
 
-    h1{
+    h1 {
         font-size: 45px;
         text-align: center;
         padding-bottom: 50px;
     }
 
-    .box-inclusive{
+    .box-inclusive {
         display: flex;
 
-        .box{
+        .box {
             width: 350px;
             padding: 0px 20px;
 
-            h2{
+            h2 {
                 font-size: 25px;
                 padding-bottom: 10px;
             }
-        
-            img{
+
+            img {
                 width: 30px;
                 padding-bottom: 10px;
             }

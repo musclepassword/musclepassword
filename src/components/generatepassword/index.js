@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from "react";
-import syncIcon from '../../assets/img/arrows-rotate-solid.svg';
+import syncIcon from '../../assets/img/rotate-right-solid.svg';
 import copyIcon from '../../assets/img/copy-solid.svg';
 
 function GeneratePassword() {
-    const [charSet, setcharSet] = useState("abcdefghijklmnopqrstuvwxyz");
+    const [charSet, setCharSet] = useState("abcdefghijklmnopqrstuvwxyz");
     const [password, setPassword] = useState("");
+    const [length, setLength] = useState(15);
 
     useEffect(() => {
         generatePassword();
     }, [])
 
     const generatePassword = () => {
-        let length = 10;
-        const charSet = "abcdefghijklmnopqrstuvwxyz";
-        const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const charNumberSet = "0123456789";
-        const charCharacterSet = "!@#$%^&";
+        // const charSet = "abcdefghijklmnopqrstuvwxyz";
+        // const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // const charNumberSet = "0123456789";
+        // const charCharacterSet = "!@#$%^&";
         let retVal = "";
-        // id ? (length = id) : length = parseInt(range.value);
         for (var i = 0, n = charSet.length; i < length; ++i) {
             retVal += charSet.charAt(Math.floor(Math.random() * n));
         }
@@ -29,29 +28,43 @@ function GeneratePassword() {
         console.log("Copied the text: " + password);
     }
 
+    const charChange = (value) => {
+        const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const charNumberSet = "0123456789";
+        const charCharacterSet = "!@#$%^&";
+        value === "ABC" && setCharSet(charSet + charUpperCaseSet);
+        value === "123" && setCharSet(charSet + charNumberSet);
+        value === "#$&" && setCharSet(charSet + charCharacterSet);
+    }
+
     return (
         <section className="generate-password">
-            <div>
+            <div className="input-range">
+                <label>Password Length: <b>{length}</b></label>
+                <input type="range" onChange={(e) => setLength(e.target.value)} value={length} />
+            </div>
+            <div className="input-password">
                 <input className="input-text" type="text" value={password} />
-                <button className="button-transparent" onClick={() => generatePassword()}>
-                    <img src={syncIcon} alt="syncicon" />
-                </button>
                 <button onClick={() => copyClipboard()}>
                     <img src={copyIcon} alt="copyicon" />
                 </button>
+                <button className="button-transparent" onClick={() => generatePassword()}>
+                    <img src={syncIcon} alt="syncicon" />
+                </button>
             </div>
-            <div>
-                <input type="checkbox" className="checkbox" name="vehicle1" value="ABC" />
-                <label for="vehicle1"> Uppercase ABC </label>
-                <br />
-                <input type="checkbox" defaultChecked={true} className="checkbox" name="vehicle1" value="abc" />
-                <label for="vehicle1"> Lowercase abc </label>
-                <br />
-                <input type="checkbox" id="number" className="checkbox" name="number" value="123" />
-                <label for="number"> Digits 123 </label>
-                <br />
-                <input type="checkbox" id="number" className="checkbox" name="number" value="#$&" />
-                <label for="number"> Symbols #$& </label>
+            <div className="char-checkbox">
+                <label for="uppercase">
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="uppercase" value="ABC" />
+                    Uppercase </label>
+                <label for="vehicle1">
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="vehicle1" value="abc" />
+                    Lowercase </label>
+                <label for="digits">
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="digits" value="123" />
+                    Digits </label>
+                <label for="symbols">
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="symbols" value="#$&" />
+                    Symbols </label>
             </div>
         </section>
     );
