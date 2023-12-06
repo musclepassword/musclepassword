@@ -1,8 +1,10 @@
 function Header() {
     return (
-        <header>
-            Muscle Password
-        </header>
+        <div className="container">
+            <header>
+                Muscle Password
+            </header>
+        </div>
     );
 }
 
