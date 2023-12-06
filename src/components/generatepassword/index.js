@@ -39,6 +39,8 @@ function GeneratePassword() {
 
     return (
         <section className="generate-password">
+            <h1>Try our strong random password generator</h1>
+            <p>Generate strong passwords using Zoho Vault’s random password generator and secure your online accounts from potential threats.</p>
             <div className="input-range">
                 <label>Password Length: <b>{length}</b></label>
                 <input type="range" onChange={(e) => setLength(e.target.value)} value={length} />
