@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap");
+
 * {
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -22,7 +25,7 @@ header {
 }
 
 input:focus {
-    outline:none;
+    outline: none;
 }
 
 .generate-password {
@@ -32,6 +35,15 @@ input:focus {
     align-items: center;
     display: grid;
     padding: 100px 0px;
+    text-align: center;
+
+    h1{
+        font-size: 30px;
+    }
+
+    p{
+        padding-bottom: 50px;
+    }
 
     .input-range {
         justify-content: center;
@@ -60,6 +72,7 @@ input:focus {
         position: relative;
         overflow: hidden;
         box-shadow: 0 3px 9px #0000000F;
+        // border-bottom: 3px solid rgb(84, 182, 0);
 
         .input-text {
             color: #2a2a33;
@@ -71,19 +84,19 @@ input:focus {
             border-radius: 15px;
             border: none;
         }
-    
+
         .button-transparent {
             position: relative;
             cursor: pointer;
         }
-    
+
         button {
             background-color: transparent;
             position: relative;
             padding: 17px 15px;
             border: none;
             cursor: pointer;
-    
+
             img {
                 width: 30px;
             }
@@ -132,6 +145,8 @@ input:focus {
 
     .box-inclusive {
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .box {
             width: 350px;
