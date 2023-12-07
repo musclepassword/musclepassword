@@ -45,7 +45,7 @@ function GeneratePassword() {
                 <label>Password Length: <b>{length}</b></label>
                 <input
                     type="range"
-                    onChange={(e) => { setLength(e.target.value) || setTimeout(generatePassword(), 500) }}
+                    onChange={(e) => { setLength(e.target.value) || setTimeout(() => generatePassword(), 0) }}
                     value={length}
                     min={4}
                 />
