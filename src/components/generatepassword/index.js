@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import syncIcon from '../../assets/img/rotate-right-solid.svg';
-import copyIcon from '../../assets/img/copy-solid.svg';
+import copyIcon from '../../assets/img/copy-regular.svg';
 
 function GeneratePassword() {
     const [charSet, setCharSet] = useState("abcdefghijklmnopqrstuvwxyz");
@@ -11,7 +11,7 @@ function GeneratePassword() {
         generatePassword();
     }, [])
 
-    const generatePassword = () => {
+    const generatePassword = (id) => {
         // const charSet = "abcdefghijklmnopqrstuvwxyz";
         // const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         // const charNumberSet = "0123456789";
@@ -40,11 +40,15 @@ function GeneratePassword() {
     return (
         <section className="generate-password">
             <h1>Strong random password generator</h1>
-            <p>Generate strong passwords using Zoho Vault’s random password generator 
-                <br />and secure your online accounts from potential threats.</p>
+            <p>Generate strong passwords using random password generator</p>
             <div className="input-range">
                 <label>Password Length: <b>{length}</b></label>
-                <input type="range" onChange={(e) => setLength(e.target.value)} value={length} />
+                <input
+                    type="range"
+                    onChange={(e) => { setLength(e.target.value) || setTimeout(generatePassword(), 500) }}
+                    value={length}
+                    min={4}
+                />
             </div>
             <div className="input-password">
                 <input className="input-text" type="text" value={password} />
