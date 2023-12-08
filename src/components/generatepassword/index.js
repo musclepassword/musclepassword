@@ -3,7 +3,7 @@ import syncIcon from '../../assets/img/rotate-right-solid.svg';
 import copyIcon from '../../assets/img/copy-regular.svg';
 
 function GeneratePassword() {
-    const [charSet, setCharSet] = useState("abcdefghijklmnopqrstuvwxyz");
+    const [charSet, setCharSet] = useState("");
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
 
@@ -11,14 +11,16 @@ function GeneratePassword() {
         generatePassword();
     }, [])
 
-    const generatePassword = (id) => {
+    
+    const generatePassword = () => {
+        const defaultChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&";
         // const charSet = "abcdefghijklmnopqrstuvwxyz";
         // const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         // const charNumberSet = "0123456789";
         // const charCharacterSet = "!@#$%^&";
         let retVal = "";
-        for (var i = 0, n = charSet.length; i < length; ++i) {
-            retVal += charSet.charAt(Math.floor(Math.random() * n));
+        for (var i = 0, n = defaultChar.length; i < length; ++i) {
+            retVal += defaultChar.charAt(Math.floor(Math.random() * n));
         }
         setPassword(retVal);
     }
@@ -61,16 +63,16 @@ function GeneratePassword() {
             </div>
             <div className="char-checkbox">
                 <label for="uppercase">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="uppercase" value="ABC" />
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={false} className="checkbox" id="uppercase" value="ABC" />
                     Uppercase </label>
                 <label for="vehicle1">
                     <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="vehicle1" value="abc" />
                     Lowercase </label>
                 <label for="digits">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="digits" value="123" />
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="digits" value="123" />
                     Digits </label>
                 <label for="symbols">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} className="checkbox" id="symbols" value="#$&" />
+                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="symbols" value="#$&" />
                     Symbols </label>
             </div>
         </section>
