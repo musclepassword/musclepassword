@@ -4,6 +4,7 @@ import Header from "./components/header";
 import GeneratePassword from "./components/generatepassword";
 import AboutGeneratePassword from "./components/aboutgeneratepassword";
 import './assets/style/global.scss';
+import Contact from "./components/contact";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <GeneratePassword />
       <AboutGeneratePassword />
+      <Contact />
       <Footer />
     </div>
   );

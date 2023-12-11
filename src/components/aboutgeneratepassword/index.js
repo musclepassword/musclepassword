@@ -1,7 +1,7 @@
 import React from "react";
 import fingerIcon from '../../assets/img/fingerprint-solid.svg';
 
-function AboutGeneratePassword() {
+const AboutGeneratePassword = () => {
 
     return (
         <section className="about-generate-password">

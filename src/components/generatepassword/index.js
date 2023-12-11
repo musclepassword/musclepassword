@@ -11,13 +11,12 @@ function GeneratePassword() {
         generatePassword();
     }, [])
 
-    
     const generatePassword = () => {
-        const defaultChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&";
-        // const charSet = "abcdefghijklmnopqrstuvwxyz";
-        // const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        // const charNumberSet = "0123456789";
-        // const charCharacterSet = "!@#$%^&";
+        const defaultChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+        const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const numbers = '0123456789';
+        const symbols = '!@#$%^&*()+_-=}{[]|:;"/?.><,`~';
         let retVal = "";
         for (var i = 0, n = defaultChar.length; i < length; ++i) {
             retVal += defaultChar.charAt(Math.floor(Math.random() * n));

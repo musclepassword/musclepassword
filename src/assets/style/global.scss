@@ -132,8 +132,8 @@ input:focus {
 }
 
 .about-generate-password {
-    background-color: #2a2a33;
-    color: #fff;
+    // background-color: #2a2a33;
+    color: #000;
     padding: 100px;
 
     h1 {
@@ -162,6 +162,14 @@ input:focus {
             }
         }
     }
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 16px;
 }
 
 footer {
