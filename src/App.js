@@ -8,13 +8,13 @@ import Contact from "./components/contact";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <GeneratePassword />
       <About />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 

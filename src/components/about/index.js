@@ -1,10 +1,10 @@
 import React from "react";
-import fingerIcon from '../../assets/img/fingerprint-solid.svg';
+import fingerIcon from '../../assets/image/fingerprint-solid.svg';
 
 const AboutGeneratePassword = () => {
 
     return (
-        <section className="about-generate-password">
+        <section className="about">
             <div className="container">
                 <h1>What makes a password strong?</h1>
                 <div className="box-inclusive">

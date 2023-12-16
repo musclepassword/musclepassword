@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import syncIcon from '../../assets/img/rotate-right-solid.svg';
-import copyIcon from '../../assets/img/copy-regular.svg';
+import syncIcon from '../../assets/image/rotate-right-solid.svg';
+import copyIcon from '../../assets/image/copy-regular.svg';
 
 function GeneratePassword() {
     const [charSet, setCharSet] = useState("");
