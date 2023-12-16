@@ -7,11 +7,20 @@ function GeneratePassword() {
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
 
+    const checkBoxList = [
+        { name: 'Uppercase', value: 'ABC', default: true },
+        { name: 'Lowercase', value: 'abc', default: false },
+        { name: 'Digits', value: '123', default: true },
+        { name: 'Symbols', value: '#$&', default: false },
+    ];
+
     useEffect(() => {
         generatePassword();
     }, [])
 
-    const generatePassword = () => {
+    const generatePassword = (e) => {
+        setLength(e ? e : length);
+
         const defaultChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         const lowercase = 'abcdefghijklmnopqrstuvwxyz';
         const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -46,7 +55,7 @@ function GeneratePassword() {
                 <label>Password Length: <b>{length}</b></label>
                 <input
                     type="range"
-                    onChange={(e) => { setLength(e.target.value) || setTimeout(() => generatePassword(), 0) }}
+                    onChange={(e) => generatePassword(e.target.value)}
                     value={length}
                     min={4}
                 />
@@ -61,18 +70,20 @@ function GeneratePassword() {
                 </button>
             </div>
             <div className="char-checkbox">
-                <label for="uppercase">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={false} className="checkbox" id="uppercase" value="ABC" />
-                    Uppercase </label>
-                <label for="vehicle1">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="vehicle1" value="abc" />
-                    Lowercase </label>
-                <label for="digits">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="digits" value="123" />
-                    Digits </label>
-                <label for="symbols">
-                    <input type="checkbox" onClick={(e) => charChange(e.target.value)} defaultChecked={true} className="checkbox" id="symbols" value="#$&" />
-                    Symbols </label>
+                {checkBoxList.map(item => {
+                    return (
+                        <label>
+                            <input
+                                type="checkbox"
+                                onClick={(e) => charChange(e.target.value)}
+                                defaultChecked={item.default}
+                                className="checkbox"
+                                value={item.value}
+                            />
+                            {item.name}
+                        </label>
+                    )
+                })}
             </div>
         </section>
     );
