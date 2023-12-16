@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import GeneratePassword from "./components/generatepassword";
-import AboutGeneratePassword from "./components/aboutgeneratepassword";
+import About from "./components/about";
 import './assets/style/global.scss';
 import Contact from "./components/contact";
 
@@ -11,7 +11,7 @@ function App() {
     <div>
       <Header />
       <GeneratePassword />
-      <AboutGeneratePassword />
+      <About />
       <Contact />
       <Footer />
     </div>
