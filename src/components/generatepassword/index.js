@@ -3,7 +3,7 @@ import syncIcon from '../../assets/image/rotate-right-solid.svg';
 import copyIcon from '../../assets/image/copy-regular.svg';
 
 function GeneratePassword() {
-    const [charSet, setCharSet] = useState("");
+    const [char, setChar] = useState("");
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
 
@@ -21,14 +21,9 @@ function GeneratePassword() {
     const generatePassword = (e) => {
         setLength(e ? e : length);
 
-        const defaultChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-        const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const numbers = '0123456789';
-        const symbols = '!@#$%^&*()+_-=}{[]|:;"/?.><,`~';
         let retVal = "";
-        for (var i = 0, n = defaultChar.length; i < length; ++i) {
-            retVal += defaultChar.charAt(Math.floor(Math.random() * n));
+        for (var i = 0, n = char.length; i < length; ++i) {
+            retVal += char.charAt(Math.floor(Math.random() * n));
         }
         setPassword(retVal);
     }
@@ -39,12 +34,19 @@ function GeneratePassword() {
     }
 
     const charChange = (value) => {
-        const charUpperCaseSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const charNumberSet = "0123456789";
-        const charCharacterSet = "!@#$%^&";
-        value === "ABC" && setCharSet(charSet + charUpperCaseSet);
-        value === "123" && setCharSet(charSet + charNumberSet);
-        value === "#$&" && setCharSet(charSet + charCharacterSet);
+        const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+        const digits = '0123456789';
+        const symbols = '!@#$%^&*()+_-=}{[]|:;"/?.><,`~';
+        if (value == 'ABC' ) {
+            setChar(char + uppercase);
+        } else if (value == 'abc') {
+            setChar(char + lowercase);
+        } else if (value == '123') {
+            setChar(char + digits);
+        } else if (value == '#$&') {
+            setChar(char + symbols);
+        }
     }
 
     return (
@@ -75,7 +77,7 @@ function GeneratePassword() {
                         <label>
                             <input
                                 type="checkbox"
-                                onClick={(e) => charChange(e.target.value)}
+                                onClick={(e) => charChange(e.target.value, item.default)}
                                 defaultChecked={item.default}
                                 className="checkbox"
                                 value={item.value}
