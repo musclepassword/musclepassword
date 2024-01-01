@@ -8,10 +8,10 @@ function GeneratePassword() {
     const [length, setLength] = useState(15);
 
     const checkBoxList = [
-        { name: 'Uppercase', value: 'ABC', default: true },
-        { name: 'Lowercase', value: 'abc', default: false },
-        { name: 'Digits', value: '123', default: true },
-        { name: 'Symbols', value: '#$&', default: false },
+        { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
+        { name: 'Lowercase', value: 'abc', default: false, character: 'abcdefghijklmnopqrstuvwxyz' },
+        { name: 'Digits', value: '123', default: true, character: '0123456789' },
+        { name: 'Symbols', value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
     ];
 
     useEffect(() => {
@@ -35,22 +35,16 @@ function GeneratePassword() {
     }
 
     const charChange = (value) => {
-        const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-        const digits = '0123456789';
-        const symbols = '!@#$%^&*()+_-=}{[]|:;"/?.><,`~';
+        let charts = '';
         checkBoxList.map(item => {
-            if (item.value == 'ABC' && item.default || value == 'ABC') {
-                setChar(char + uppercase);
-            } else if (item.value == 'abc' && item.default ||  value == 'abc') {
-                setChar(char + lowercase);
-            } else if (item.value == '123' && item.default ||  value == '123') {
-                setChar(char + digits);
-            } else if (item.value == '#$&' && item.default ||  value == '#$&') {
-                setChar(char + symbols);
+            if (item.value == value || item.default) {
+                charts = charts + item.character;
             }
         })
+        setChar(charts);
     }
+
+    console.log("charts: ", char);
 
     return (
         <section className="generate-password">
