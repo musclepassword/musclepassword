@@ -15,6 +15,7 @@ function GeneratePassword() {
     ];
 
     useEffect(() => {
+        charChange();
         generatePassword();
     }, [])
 
@@ -38,15 +39,17 @@ function GeneratePassword() {
         const lowercase = 'abcdefghijklmnopqrstuvwxyz';
         const digits = '0123456789';
         const symbols = '!@#$%^&*()+_-=}{[]|:;"/?.><,`~';
-        if (value == 'ABC' ) {
-            setChar(char + uppercase);
-        } else if (value == 'abc') {
-            setChar(char + lowercase);
-        } else if (value == '123') {
-            setChar(char + digits);
-        } else if (value == '#$&') {
-            setChar(char + symbols);
-        }
+        checkBoxList.map(item => {
+            if (item.value == 'ABC' && item.default || value == 'ABC') {
+                setChar(char + uppercase);
+            } else if (item.value == 'abc' && item.default ||  value == 'abc') {
+                setChar(char + lowercase);
+            } else if (item.value == '123' && item.default ||  value == '123') {
+                setChar(char + digits);
+            } else if (item.value == '#$&' && item.default ||  value == '#$&') {
+                setChar(char + symbols);
+            }
+        })
     }
 
     return (
