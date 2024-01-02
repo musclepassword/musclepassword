@@ -34,7 +34,8 @@ function GeneratePassword() {
         console.log("Copied the text: " + password);
     }
 
-    const charChange = (value) => {
+    const charChange = (value, checked) => {
+        console.log(value, checked);
         let charts = '';
         checkBoxList.map(item => {
             if (item.value == value || item.default) {
@@ -74,7 +75,7 @@ function GeneratePassword() {
                         <label>
                             <input
                                 type="checkbox"
-                                onClick={(e) => charChange(e.target.value, item.default)}
+                                onClick={(e) => charChange(e.target.value, e.target.checked)}
                                 defaultChecked={item.default}
                                 className="checkbox"
                                 value={item.value}
