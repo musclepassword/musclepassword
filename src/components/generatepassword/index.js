@@ -9,7 +9,7 @@ function GeneratePassword() {
 
     const checkBoxList = [
         { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
-        { name: 'Lowercase', value: 'abc', default: false, character: 'abcdefghijklmnopqrstuvwxyz' },
+        { name: 'Lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
         { name: 'Digits', value: '123', default: true, character: '0123456789' },
         { name: 'Symbols', value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
     ];
