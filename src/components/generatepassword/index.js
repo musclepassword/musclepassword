@@ -37,7 +37,7 @@ function GeneratePassword() {
     const charChange = (value, checked) => {
         let charts = '';
         checkBoxList.map(item => {
-            if (item.value == value || item.default) {
+            if (item.value === value || item.default) {
                 charts = charts + item.character;
             }
         });
