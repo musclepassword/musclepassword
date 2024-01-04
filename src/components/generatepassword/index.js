@@ -67,10 +67,11 @@ function GeneratePassword() {
                 </button>
             </div>
             <div className="char-checkbox">
-                {checkBoxList.map(item => {
+                {checkBoxList.map((item, key) => {
                     return (
                         <label>
                             <input
+                                key={key}
                                 type="checkbox"
                                 onClick={(e) => charChange(e.target.value, e.target.checked)}
                                 defaultChecked={item.default}
