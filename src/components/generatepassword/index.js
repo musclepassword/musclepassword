@@ -35,18 +35,14 @@ function GeneratePassword() {
     }
 
     const charChange = (value, checked) => {
-        // console.log(value, checked);
         let charts = '';
         checkBoxList.map(item => {
             if (item.value == value || item.default) {
                 charts = charts + item.character;
             }
         });
-        console.log(charts);
         setChar(charts);
     }
-
-    // console.log("charts: ", char);
 
     return (
         <section className="generate-password">
