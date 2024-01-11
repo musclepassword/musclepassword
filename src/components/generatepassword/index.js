@@ -17,7 +17,7 @@ function GeneratePassword() {
     useEffect(() => {
         charChange();
         generatePassword();
-    }, [])
+    }, []);
 
     const generatePassword = (e) => {
         setLength(e ? e : length);
