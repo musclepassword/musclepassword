@@ -6,6 +6,7 @@ function GeneratePassword() {
     const [char, setChar] = useState("");
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
+    const [checkboxStates, setCheckboxStates] = useState({});
 
     const checkBoxList = [
         { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
@@ -17,7 +18,7 @@ function GeneratePassword() {
     useEffect(() => {
         charChange();
         generatePassword();
-    }, []);
+    }, [checkboxStates]);
 
     const generatePassword = (e) => {
         setLength(e ? e : length);
@@ -34,14 +35,21 @@ function GeneratePassword() {
         console.log("Copied the text: " + password);
     }
 
-    const charChange = (value, checked) => {
-        let charts = '';
-        checkBoxList.map(item => {
-            if (item.value === value || item.default) {
-                charts = charts + item.character;
+    const charChange = () => {
+        let updatedChar = '';
+        checkBoxList.forEach(item => {
+            if (checkboxStates[item.value] || item.default) {
+                updatedChar += item.character;
             }
         });
-        setChar(charts);
+        setChar(updatedChar);
+    }
+
+    const handleCheckboxChange = (value, checked) => {
+        setCheckboxStates(prevState => ({
+            ...prevState,
+            [value]: checked,
+        }));
     }
 
     return (
@@ -67,21 +75,21 @@ function GeneratePassword() {
                 </button>
             </div>
             <div className="char-checkbox">
-                {checkBoxList.map((item, key) => {
-                    return (
-                        <label>
-                            <input
-                                key={key}
-                                type="checkbox"
-                                onClick={(e) => charChange(e.target.value, e.target.checked)}
-                                defaultChecked={item.default}
-                                className="checkbox"
-                                value={item.value}
-                            />
-                            {item.name}
-                        </label>
-                    )
-                })}
+                {checkBoxList.map((item, key) => (
+                    <label key={key}>
+                        <input
+                            type="checkbox"
+                            onChange={(e) => {
+                                handleCheckboxChange(item.value, e.target.checked);
+                            }}
+                            defaultChecked={item.default}
+                            checked={checkboxStates[item.value]}
+                            className="checkbox"
+                            value={item.value}
+                        />
+                        {item.name}
+                    </label>
+                ))}
             </div>
         </section>
     );
