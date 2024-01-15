@@ -3,7 +3,6 @@ import syncIcon from '../../assets/image/rotate-right-solid.svg';
 import copyIcon from '../../assets/image/copy-regular.svg';
 
 function GeneratePassword() {
-    // const [char, setChar] = useState("");
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
     const [checkboxStates, setCheckboxStates] = useState({});
@@ -24,8 +23,9 @@ function GeneratePassword() {
     });
 
     useEffect(() => {
+        charChange();
         generatePassword();
-    }, [checkboxStates]);
+    }, [checkboxStates, checkBoxList]);
 
     const generatePassword = (e) => {
         setLength(e ? e : length);
@@ -52,19 +52,19 @@ function GeneratePassword() {
             });
             return updatedList;
         });
-        const charChange = () => {
-            let updatedChar = '';
-            checkBoxList.map(item => {
-                if (item.default) {
-                    updatedChar += item.character;
-                }
-            });
-            setChar(updatedChar);
-        }
     };
-
+    
     console.log(char);
-
+    const charChange = () => {
+        let updatedChar = '';
+        checkBoxList.map(item => {
+            if (item.default) {
+                updatedChar += item.character;
+            }
+        });
+        setChar(updatedChar);
+    };
+    
     return (
         <section className="generate-password">
             <h1>Strong random password generator</h1>
