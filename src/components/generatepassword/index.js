@@ -5,7 +5,6 @@ import copyIcon from '../../assets/image/copy-regular.svg';
 function GeneratePassword() {
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
-    const [checkboxStates, setCheckboxStates] = useState({});
     const [checkBoxList, setCheckBoxList] = useState([
         { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
         { name: 'Lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
@@ -25,7 +24,7 @@ function GeneratePassword() {
     useEffect(() => {
         charChange();
         generatePassword();
-    }, [checkboxStates, checkBoxList]);
+    }, [checkBoxList]);
 
     const generatePassword = (e) => {
         setLength(e ? e : length);
@@ -96,7 +95,6 @@ function GeneratePassword() {
                                 handleCheckboxChange(item.value, e.target.checked);
                             }}
                             defaultChecked={item.default}
-                            checked={checkboxStates[item.value]}
                             className="checkbox"
                             value={item.value}
                         />
