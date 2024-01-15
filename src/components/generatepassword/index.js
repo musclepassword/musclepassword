@@ -3,20 +3,27 @@ import syncIcon from '../../assets/image/rotate-right-solid.svg';
 import copyIcon from '../../assets/image/copy-regular.svg';
 
 function GeneratePassword() {
-    const [char, setChar] = useState("");
+    // const [char, setChar] = useState("");
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
     const [checkboxStates, setCheckboxStates] = useState({});
-
-    const checkBoxList = [
+    const [checkBoxList, setCheckBoxList] = useState([
         { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
         { name: 'Lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
         { name: 'Digits', value: '123', default: true, character: '0123456789' },
         { name: 'Symbols', value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
-    ];
+    ]);
+    const [char, setChar] = useState(() => {
+        let initialChar = '';
+        checkBoxList.map(item => {
+            if (item.default) {
+                initialChar += item.character;
+            }
+        });
+        return initialChar;
+    });
 
     useEffect(() => {
-        charChange();
         generatePassword();
     }, [checkboxStates]);
 
@@ -35,22 +42,28 @@ function GeneratePassword() {
         console.log("Copied the text: " + password);
     }
 
-    const charChange = () => {
-        let updatedChar = '';
-        checkBoxList.forEach(item => {
-            if (checkboxStates[item.value] || item.default) {
-                updatedChar += item.character;
-            }
-        });
-        setChar(updatedChar);
-    }
-
     const handleCheckboxChange = (value, checked) => {
-        setCheckboxStates(prevState => ({
-            ...prevState,
-            [value]: checked,
-        }));
-    }
+        setCheckBoxList(prevState => {
+            const updatedList = prevState.map(item => {
+                if (item.value === value) {
+                    return { ...item, default: checked };
+                }
+                return item;
+            });
+            return updatedList;
+        });
+        const charChange = () => {
+            let updatedChar = '';
+            checkBoxList.map(item => {
+                if (item.default) {
+                    updatedChar += item.character;
+                }
+            });
+            setChar(updatedChar);
+        }
+    };
+
+    console.log(char);
 
     return (
         <section className="generate-password">
