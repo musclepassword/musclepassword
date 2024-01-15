@@ -53,7 +53,6 @@ function GeneratePassword() {
         });
     };
     
-    console.log(char);
     const charChange = () => {
         let updatedChar = '';
         checkBoxList.map(item => {
