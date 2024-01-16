@@ -20,10 +20,13 @@ function GeneratePassword() {
         });
         return initialChar;
     });
+    
+    useEffect(() => {
+        generatePassword();
+    }, []);
 
     useEffect(() => {
         charChange();
-        generatePassword();
     }, [checkBoxList]);
 
     const generatePassword = (e) => {
