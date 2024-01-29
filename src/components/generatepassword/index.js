@@ -13,7 +13,7 @@ function getGradientColor(percentage) {
     return `rgb(${midColor.join(',')})`;
 }
 
-function GeneratePassword() {
+const GeneratePassword = () => {
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
     const [checkBoxList, setCheckBoxList] = useState([
