@@ -1,5 +1,5 @@
 import React from "react";
-import fingerIcon from '../../assets/image/fingerprint-solid.svg';
+import { Card, Row, Col } from 'antd';
 
 const AboutGeneratePassword = () => {
 
@@ -7,23 +7,41 @@ const AboutGeneratePassword = () => {
         <section className="about">
             <div className="container">
                 <h1>What makes a password strong?</h1>
-                <div className="box-inclusive">
-                    <div className="box">
-                        <img src={fingerIcon} alt="fingericon" />
-                        <h2>Long</h2>
-                        <p>The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
-                    </div>
-                    <div className="box">
-                        <img src={fingerIcon} alt="fingericon" />
-                        <h2>Complex</h2>
-                        <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
-                    </div>
-                    <div className="box">
-                        <img src={fingerIcon} alt="fingericon" />
-                        <h2>Unique</h2>
-                        <p>A strong password should be unique to each account to reduce vulnerability in the event of a hack.</p>
-                    </div>
-                </div>
+                <Row gutter={16}>
+                    <Col span={8}>
+                        <Card
+                            title={<h2>Long</h2>}
+                            bordered={false}
+                            style={{
+                                width: 300,
+                            }}
+                        >
+                            <p>The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
+                        </Card>
+                    </Col>
+                    <Col span={8}>
+                        <Card
+                            title={<h2>Complex</h2>}
+                            bordered={false}
+                            style={{
+                                width: 300,
+                            }}
+                        >
+                            <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
+                        </Card>
+                    </Col>
+                    <Col span={8}>
+                        <Card
+                            title={<h2>Unique</h2>}
+                            bordered={false}
+                            style={{
+                                width: 300,
+                            }}
+                        >
+                            <p>A strong password should be unique to each account to reduce vulnerability in the event of a hack.</p>
+                        </Card>
+                    </Col>
+                </Row>
             </div>
         </section>
     );
