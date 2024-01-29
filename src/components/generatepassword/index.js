@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
-import syncIcon from '../../assets/image/rotate-right-solid.svg';
-import copyIcon from '../../assets/image/copy-regular.svg';
+import { Button, Input, Checkbox, Slider } from 'antd';
+import { SyncOutlined, CopyOutlined } from '@ant-design/icons';
+
+function getGradientColor(percentage) {
+    const startColor = [135, 208, 104];
+    const endColor = [255, 204, 199];
+    const midColor = startColor.map((start, i) => {
+        const end = endColor[i];
+        const delta = end - start;
+        return (start + delta * percentage).toFixed(0);
+    });
+    return `rgb(${midColor.join(',')})`;
+}
 
 function GeneratePassword() {
     const [password, setPassword] = useState("");
@@ -20,7 +31,10 @@ function GeneratePassword() {
         });
         return initialChar;
     });
-    
+    const [value, setValue] = useState([15, 100]);
+    const start = value[0] / 100;
+    const end = value[value.length - 1] / 100;
+
     useEffect(() => {
         generatePassword();
     }, []);
@@ -30,6 +44,7 @@ function GeneratePassword() {
     }, [checkBoxList]);
 
     const generatePassword = (e) => {
+        console.log(e);
         setLength(e ? e : length);
 
         let retVal = "";
@@ -55,7 +70,7 @@ function GeneratePassword() {
             return updatedList;
         });
     };
-    
+
     const charChange = () => {
         let updatedChar = '';
         checkBoxList.map(item => {
@@ -65,43 +80,50 @@ function GeneratePassword() {
         });
         setChar(updatedChar);
     };
-    
+
     return (
         <section className="generate-password">
             <h1>Strong random password generator</h1>
             <p>Generate strong passwords using random password generator</p>
             <div className="input-range">
                 <label>Password Length: <b>{length}</b></label>
-                <input
-                    type="range"
-                    onChange={(e) => generatePassword(e.target.value)}
-                    value={length}
-                    min={4}
+                <Slider
+                    defaultValue={value}
+                    onChange={setValue}
+                    style={{ width: 400 }}
+                    // onChange={(e) => generatePassword(e.target.value)}
+                    styles={{
+                        track: {
+                            background: 'transparent',
+                        },
+                        tracks: {
+                            background: `linear-gradient(to left, ${getGradientColor(start)} 0%, ${getGradientColor(
+                                end,
+                            )} 100%)`,
+                        },
+                    }}
                 />
             </div>
             <div className="input-password">
-                <input className="input-text" type="text" value={password} />
-                <button onClick={() => copyClipboard()}>
-                    <img src={copyIcon} alt="copyicon" />
-                </button>
-                <button className="button-transparent" onClick={() => generatePassword()}>
-                    <img src={syncIcon} alt="syncicon" />
-                </button>
+                <Input className="input-text" type="text" variant="borderless" value={password} />
+                <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
+                    <CopyOutlined style={{ fontSize: 20 }} />
+                </Button>
+                <Button className="button-transparent" type="link" onClick={() => generatePassword()}>
+                    <SyncOutlined style={{ fontSize: 20 }} />
+                </Button>
             </div>
             <div className="char-checkbox">
                 {checkBoxList.map((item, key) => (
-                    <label key={key}>
-                        <input
-                            type="checkbox"
-                            onChange={(e) => {
-                                handleCheckboxChange(item.value, e.target.checked);
-                            }}
-                            defaultChecked={item.default}
-                            className="checkbox"
-                            value={item.value}
-                        />
+                    <Checkbox
+                        key={key}
+                        checked={item.default}
+                        onChange={(e) => {
+                            handleCheckboxChange(item.value, e.target.checked);
+                        }}
+                    >
                         {item.name}
-                    </label>
+                    </Checkbox>
                 ))}
             </div>
         </section>
