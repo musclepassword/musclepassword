@@ -1,10 +1,8 @@
-function Header() {
+const Header = () => {
     return (
-        <div className="container">
-            <header>
-                Muscle Password
-            </header>
-        </div>
+        <header>
+            Muscle Password
+        </header>
     );
 }
 

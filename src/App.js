@@ -1,20 +1,22 @@
 import React from "react";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import GeneratePassword from "./components/generatepassword";
-import About from "./components/about";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import GeneratePassword from "./components/GeneratePassword";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ChromeExtension from "./components/ChromeExt";
 import './assets/style/global.scss';
-import Contact from "./components/contact";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Header />
       <GeneratePassword />
       <About />
+      <ChromeExtension />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 
