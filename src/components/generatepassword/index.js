@@ -44,11 +44,11 @@ const GeneratePassword = () => {
     }, [checkBoxList]);
 
     const generatePassword = (e) => {
-        console.log(e);
         setLength(e ? e : length);
+        let initialLength = e ? e : length;
 
         let retVal = "";
-        for (var i = 0, n = char.length; i < length; ++i) {
+        for (var i = 0, n = char.length; i < initialLength; ++i) {
             retVal += char.charAt(Math.floor(Math.random() * n));
         }
         setPassword(retVal);
@@ -89,7 +89,7 @@ const GeneratePassword = () => {
                 <label>Password Length: <b>{length}</b></label>
                 <Slider
                     defaultValue={value}
-                    onChange={setValue}
+                    onChange={(e) => setValue(e) || generatePassword(e)}
                     style={{ width: 400 }}
                     // onChange={(e) => generatePassword(e.target.value)}
                     styles={{
