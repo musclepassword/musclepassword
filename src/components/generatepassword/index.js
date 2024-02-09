@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
 import { SyncOutlined, CopyOutlined, CheckCircleOutlined } from '@ant-design/icons';
 
-function getGradientColor(percentage) {
+const getGradientColor = (percentage) => {
     const startColor = [135, 208, 104];
     const endColor = [255, 204, 199];
     const midColor = startColor.map((start, i) => {
