@@ -91,7 +91,6 @@ const GeneratePassword = () => {
                     defaultValue={value}
                     onChange={(e) => setValue(e) || generatePassword(e)}
                     style={{ width: 400 }}
-                    // onChange={(e) => generatePassword(e.target.value)}
                     styles={{
                         track: {
                             background: 'transparent',
