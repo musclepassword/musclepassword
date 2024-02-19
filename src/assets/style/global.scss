@@ -15,12 +15,13 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 50px 0px;
+    padding: 50px 30px;
 }
 
 .container {
     padding-left: 120px;
     padding-right: 120px;
+    display: inline;
 }
 
 input:focus {
@@ -159,10 +160,10 @@ input:focus {
 }
 
 footer {
-    // background-color: #0d1117;
+    background-color: aliceblue;
     color: #1d1d22;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 80px 0px;
+    padding: 80px 30px;
 }
