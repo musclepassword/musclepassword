@@ -152,7 +152,7 @@ input:focus {
 
 .contact{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
     border-radius: 16px;

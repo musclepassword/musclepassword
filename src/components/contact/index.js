@@ -6,10 +6,10 @@ const Contact = () => {
 
     return (
         <section className="contact">
-            <h1>Lorem ipsum dolar</h1>
-            <p>Join over 30 million people who use lorem every day to make their writing shine.</p>
-
-            <Button type="primary" size="large" href="http://github.com/cuneydbolukoglu"> <GithubOutlined /> Other project <b> GitHub</b></Button>
+            <h1 style={{ color: "#1677ff" }}>Get in touch!</h1>
+            <div>
+                <Button type="primary" size="large" href="http://github.com/cuneydbolukoglu"> <GithubOutlined />Contact</Button>
+            </div>
         </section>
     );
 }
