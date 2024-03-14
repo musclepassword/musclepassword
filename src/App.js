@@ -8,13 +8,13 @@ import './assets/style/global.scss';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Header />
       <GeneratePassword />
       <About />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 
