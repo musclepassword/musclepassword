@@ -4,8 +4,8 @@ import { Card, Row, Col } from 'antd';
 const About = () => {
 
     return (
-        <div className="container">
-            <section className="about">
+        <section className="about">
+            <div className="container">
                 <h1>What makes a password strong?</h1>
                 <Row gutter={16}>
                     <Col span={8}>
@@ -33,8 +33,8 @@ const About = () => {
                         </Card>
                     </Col>
                 </Row>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 
