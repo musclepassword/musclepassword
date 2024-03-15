@@ -56,7 +56,6 @@ const GeneratePassword = () => {
 
     const copyClipboard = () => {
         navigator.clipboard.writeText(password);
-        console.log("Copied the text: " + password);
     }
 
     const handleCheckboxChange = (value, checked) => {
