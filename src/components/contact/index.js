@@ -9,7 +9,7 @@ const Contact = () => {
             <section className="contact">
                 <h1 style={{ color: "#1677ff" }}>Get in touch!</h1>
                 <div>
-                    <Button type="primary" size="large" href="http://github.com/cuneydbolukoglu"> <GithubOutlined />Contact</Button>
+                    <Button type="primary" size="large" href="https://github.com/musclepassword"> <GithubOutlined />Github</Button>
                 </div>
             </section>
         </div>
