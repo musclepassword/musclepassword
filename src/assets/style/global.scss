@@ -8,6 +8,11 @@
 
 a {
     text-decoration: none;
+    color: #1677ff;
+
+    &:hover {
+        color: #69a7fe;
+    }
 }
 
 header {
