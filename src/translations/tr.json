@@ -1,0 +1,10 @@
+{
+    "translation": {
+        "uppercase": "Büyük harf",
+        "lowercase": "Küçük harf",
+        "digits": "Rakamlar",
+        "symbols": "Semboller",
+        "password_copied": "Şifre Kopyalandı",
+        "password_length": "Şifre Uzunluğu"
+    }
+}

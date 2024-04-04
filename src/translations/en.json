@@ -1,0 +1,10 @@
+{
+    "translation": {
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase",
+        "digits": "Digits",
+        "symbols": "Symbols",
+        "password_copied": "Password Copied",
+        "password_length": "Password Length"
+    }
+}
