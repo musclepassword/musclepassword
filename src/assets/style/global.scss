@@ -159,9 +159,10 @@ input:focus {
 }
 
 .contact {
-    display: flex;
-    justify-content: space-between;
-    -webkit-box-align: center;
+    // display: flex;
+    text-align: center;
+    justify-content: center;
+    // -webkit-box-align: center;
     align-items: center;
     border-radius: 16px;
     padding: 100px 0px;
