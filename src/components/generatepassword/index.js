@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
 import { SyncOutlined, CopyOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import i18n from '../../i18n';
 
 const getGradientColor = (percentage) => {
     const startColor = [135, 208, 104];
@@ -17,10 +18,10 @@ const GeneratePassword = () => {
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
     const [checkBoxList, setCheckBoxList] = useState([
-        { name: 'Uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
-        { name: 'Lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
-        { name: 'Digits', value: '123', default: true, character: '0123456789' },
-        { name: 'Symbols', value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
+        { name: i18n.t('uppercase'), value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
+        { name: i18n.t('lowercase'), value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
+        { name: i18n.t('digits'), value: '123', default: true, character: '0123456789' },
+        { name: i18n.t('symbols'), value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
     ]);
     const [char, setChar] = useState(() => {
         let initialChar = '';
@@ -85,7 +86,7 @@ const GeneratePassword = () => {
             <h1>Strong random password generator</h1>
             <p>Generate strong passwords using random password generator</p>
             <div className="input-range">
-                <label>Password Length: <b>{length}</b></label>
+                <label>{i18n.t('password_length') + ': '}<b>{length}</b></label>
                 <Slider
                     defaultValue={value}
                     onChange={(e) => setValue(e) || generatePassword(e)}
@@ -105,7 +106,7 @@ const GeneratePassword = () => {
             </div>
             <div className="input-password">
                 <Input className="input-text" type="text" variant="borderless" value={password} />
-                <Tooltip title={<span><CheckCircleOutlined /> Password copied</span>} color="green" trigger="click">
+                <Tooltip title={<span><CheckCircleOutlined /> {i18n.t('password_copied')}</span>} color="green" trigger="click">
                     <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
                         <CopyOutlined style={{ fontSize: 20 }} />
                     </Button>
