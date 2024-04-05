@@ -1,4 +1,4 @@
-import { Dropdown } from 'antd';
+import { Dropdown, Space } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 
 const SelectLang = () => {
@@ -8,13 +8,11 @@ const SelectLang = () => {
         window.location.reload(true);
     }
 
-    const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
+    const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
     const languageLabels = [
         { key: 'tr-TR', value: 'Türkçe' },
         { key: 'en-US', value: 'English' }
     ];
-
-    console.log(languageLabels.map(locale => console.log(locale)));
 
     const langMenu = languageLabels.map(locale => (
         {
@@ -28,7 +26,9 @@ const SelectLang = () => {
 
     return (
         <Dropdown menu={{ items: langMenu, selectedKeys: selectLang }} placement="bottomRight" arrow>
-            <GlobalOutlined />
+            <Space>
+                <GlobalOutlined />
+            </Space>
         </Dropdown>
     );
 }
