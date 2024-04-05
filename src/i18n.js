@@ -21,7 +21,7 @@ i18n
     //   escapeValue: false
     // },
     nonExplicitWhitelist: true,
-    debug: true,
+    debug: false,
   });
 
 export default i18n;

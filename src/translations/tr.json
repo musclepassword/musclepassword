@@ -5,6 +5,8 @@
         "digits": "Rakamlar",
         "symbols": "Semboller",
         "password_copied": "Şifre Kopyalandı",
-        "password_length": "Şifre Uzunluğu"
+        "password_length": "Şifre Uzunluğu",
+        "generate_password_title": "Güçlü rastgele şifre oluşturucu",
+        "generate_password_desc": "Rastgele şifre oluşturucuyu kullanarak güçlü şifreler oluşturun"
     }
 }

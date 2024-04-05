@@ -83,8 +83,8 @@ const GeneratePassword = () => {
 
     return (
         <section className="generate-password">
-            <h1>Strong random password generator</h1>
-            <p>Generate strong passwords using random password generator</p>
+            <h1>{i18n.t('generate_password_title')}</h1>
+            <p>{i18n.t('generate_password_desc')}</p>
             <div className="input-range">
                 <label>{i18n.t('password_length') + ': '}<b>{length}</b></label>
                 <Slider
