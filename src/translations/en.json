@@ -7,6 +7,9 @@
         "password_copied": "Password Copied",
         "password_length": "Password Length",
         "generate_password_title": "Strong random password generator",
-        "generate_password_desc": "Generate strong passwords using random password generator"
+        "generate_password_desc": "Generate strong passwords using random password generator",
+        "long": "Long",
+        "complex": "Complex",
+        "unique": "Unique"
     }
 }
