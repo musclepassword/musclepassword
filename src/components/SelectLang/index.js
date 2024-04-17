@@ -1,11 +1,12 @@
 import { Dropdown, Space } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
+import { useTranslation } from "react-i18next";
 
 const SelectLang = () => {
+    const { i18n } = useTranslation();
 
     const changeLang = (lang) => {
-        localStorage.setItem('i18nextLng', lang);
-        window.location.reload(true);
+        i18n.changeLanguage(lang);
     }
 
     const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';

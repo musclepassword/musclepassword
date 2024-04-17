@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
 import { SyncOutlined, CopyOutlined, CheckCircleOutlined } from '@ant-design/icons';
-import i18n from '../../i18n';
+import { useTranslation } from "react-i18next";
 
 const getGradientColor = (percentage) => {
     const startColor = [135, 208, 104];
@@ -15,13 +15,14 @@ const getGradientColor = (percentage) => {
 }
 
 const GeneratePassword = () => {
+    const { i18n } = useTranslation();
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
     const [checkBoxList, setCheckBoxList] = useState([
-        { name: i18n.t('uppercase'), value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
-        { name: i18n.t('lowercase'), value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
-        { name: i18n.t('digits'), value: '123', default: true, character: '0123456789' },
-        { name: i18n.t('symbols'), value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
+        { name: 'uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
+        { name: 'lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
+        { name: 'digits', value: '123', default: true, character: '0123456789' },
+        { name: 'symbols', value: '#$&', default: false, character: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~' },
     ]);
     const [char, setChar] = useState(() => {
         let initialChar = '';
@@ -125,7 +126,7 @@ const GeneratePassword = () => {
                             handleCheckboxChange(item.value, e.target.checked);
                         }}
                     >
-                        {item.name}
+                        {i18n.t(item.name)}
                     </Checkbox>
                 ))}
             </div>
