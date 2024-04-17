@@ -15,7 +15,7 @@ const About = () => {
                             title={<h2>{i18n.t('long')}</h2>}
                             bordered={false}
                         >
-                            <p>The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
+                            <p>{i18n.t('long_desc')}</p>
                         </Card>
                     </Col>
                     <Col span={8}>
@@ -23,7 +23,7 @@ const About = () => {
                             title={<h2>{i18n.t('complex')}</h2>}
                             bordered={false}
                         >
-                            <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
+                            <p>{i18n.t('complex_desc')}</p>
                         </Card>
                     </Col>
                     <Col span={8}>
@@ -31,7 +31,7 @@ const About = () => {
                             title={<h2>{i18n.t('unique')}</h2>}
                             bordered={false}
                         >
-                            <p>A strong password should be unique to each account to reduce vulnerability in the event of a hack.</p>
+                            <p>{i18n.t('unique_desc')}</p>
                         </Card>
                     </Col>
                 </Row>
