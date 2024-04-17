@@ -10,6 +10,7 @@
         "generate_password_desc": "Rastgele şifre oluşturucuyu kullanarak güçlü şifreler oluşturun",
         "long": "Uzun",
         "complex": "Karmaşık",
-        "unique": "Eşsiz"
+        "unique": "Eşsiz",
+        "What makes a password strong": "Bir şifreyi güçlü kılan nedir?"
     }
 }

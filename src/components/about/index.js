@@ -1,13 +1,14 @@
 import React from "react";
 import { Card, Row, Col } from 'antd';
-import i18n from '../../i18n';
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+    const { i18n } = useTranslation();
 
     return (
         <section className="about">
             <div className="container">
-                <h1>What makes a password strong?</h1>
+                <h1>{i18n.t('What makes a password strong')}</h1>
                 <Row gutter={16}>
                     <Col span={8}>
                         <Card

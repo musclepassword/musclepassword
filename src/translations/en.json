@@ -10,6 +10,7 @@
         "generate_password_desc": "Generate strong passwords using random password generator",
         "long": "Long",
         "complex": "Complex",
-        "unique": "Unique"
+        "unique": "Unique",
+        "What makes a password strong": "What makes a password strong?"
     }
 }
