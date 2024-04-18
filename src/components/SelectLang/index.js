@@ -7,7 +7,7 @@ const SelectLang = () => {
 
     const changeLang = (lang) => {
         i18n.changeLanguage(lang);
-    }
+    };
 
     const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
     const languageLabels = [

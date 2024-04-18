@@ -54,11 +54,11 @@ const GeneratePassword = () => {
             retVal += char.charAt(Math.floor(Math.random() * n));
         }
         setPassword(retVal);
-    }
+    };
 
     const copyClipboard = () => {
         navigator.clipboard.writeText(password);
-    }
+    };
 
     const handleCheckboxChange = (value, checked) => {
         setCheckBoxList(prevState => {
