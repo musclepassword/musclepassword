@@ -10,7 +10,7 @@ const About = () => {
             <div className="container">
                 <h1>{i18n.t('What makes a password strong')}</h1>
                 <Row gutter={16}>
-                    <Col span={8}>
+                    <Col sm={24} md={8}>
                         <Card
                             title={<h2>{i18n.t('long')}</h2>}
                             bordered={false}
@@ -18,7 +18,7 @@ const About = () => {
                             <p>{i18n.t('long_desc')}</p>
                         </Card>
                     </Col>
-                    <Col span={8}>
+                    <Col sm={24} md={8}>
                         <Card
                             title={<h2>{i18n.t('complex')}</h2>}
                             bordered={false}
@@ -26,7 +26,7 @@ const About = () => {
                             <p>{i18n.t('complex_desc')}</p>
                         </Card>
                     </Col>
-                    <Col span={8}>
+                    <Col sm={24} md={8}>
                         <Card
                             title={<h2>{i18n.t('unique')}</h2>}
                             bordered={false}

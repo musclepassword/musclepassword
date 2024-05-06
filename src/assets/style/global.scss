@@ -62,6 +62,10 @@ input:focus {
             text-align: center;
         }
 
+        .slider{
+            width: 400px;
+        }
+
         input {
             width: 520px;
             padding: 50px 0px;
@@ -176,4 +180,38 @@ footer {
     display: flex;
     text-align: center;
     padding: 80px 0px;
+}
+
+@media screen and (max-width: 740px) {
+
+    .generate-password {
+        display: block;
+        padding: 100px 10px;
+
+        .char-checkbox{
+            display: block;
+        }
+
+        .input-password {
+            width: 90%;
+        }
+
+        .input-range{
+            .slider{
+                width: 350px;
+            }
+        }
+    }
+
+    .about {
+        padding: 10px;
+
+        .ant-col{
+            padding: 8px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    }
 }

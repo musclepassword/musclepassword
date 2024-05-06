@@ -91,7 +91,7 @@ const GeneratePassword = () => {
                 <Slider
                     defaultValue={value}
                     onChange={(e) => setValue(e) || generatePassword(e)}
-                    style={{ width: 400 }}
+                    className="slider"
                     min={3}
                     max={50}
                     styles={{
