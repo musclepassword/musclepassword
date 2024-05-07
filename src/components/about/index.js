@@ -8,27 +8,27 @@ const About = () => {
     return (
         <section className="about">
             <div className="container">
-                <h1>{i18n.t('What makes a password strong')}</h1>
-                <Row gutter={16}>
-                    <Col sm={24} md={8}>
+                <h2>{i18n.t('What makes a password strong')}</h2>
+                <Row className="about-row" gutter={16}>
+                    <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h2>{i18n.t('long')}</h2>}
+                            title={<h3>{i18n.t('long')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('long_desc')}</p>
                         </Card>
                     </Col>
-                    <Col sm={24} md={8}>
+                    <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h2>{i18n.t('complex')}</h2>}
+                            title={<h3>{i18n.t('complex')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('complex_desc')}</p>
                         </Card>
                     </Col>
-                    <Col sm={24} md={8}>
+                    <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h2>{i18n.t('unique')}</h2>}
+                            title={<h3>{i18n.t('unique')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('unique_desc')}</p>
