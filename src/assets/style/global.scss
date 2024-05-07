@@ -15,6 +15,19 @@ a {
     }
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 45px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+}
+
 header {
     color: #1d1d22;
     justify-content: space-between;
@@ -37,17 +50,12 @@ input:focus {
 }
 
 .generate-password {
-    // background-color: #1d1d22;
     color: #1d1d22;
     justify-content: center;
     align-items: center;
     display: grid;
     padding: 100px 0px;
     text-align: center;
-
-    h1 {
-        font-size: 30px;
-    }
 
     p {
         padding-bottom: 50px;
@@ -62,7 +70,7 @@ input:focus {
             text-align: center;
         }
 
-        .slider{
+        .slider {
             width: 400px;
         }
 
@@ -84,7 +92,6 @@ input:focus {
         position: relative;
         overflow: hidden;
         box-shadow: 0 3px 9px #0000000F;
-        // border-bottom: 3px solid rgb(84, 182, 0);
 
         .input-text {
             color: #2a2a33;
@@ -134,10 +141,8 @@ input:focus {
     color: #000;
     padding: 100px 120px;
 
-    h1 {
-        font-size: 45px;
-        text-align: center;
-        padding-bottom: 50px;
+    .about-row {
+        padding-top: 40px;
     }
 
     .box-inclusive {
@@ -149,11 +154,6 @@ input:focus {
             width: 350px;
             padding: 0px 20px;
 
-            h2 {
-                font-size: 25px;
-                padding-bottom: 10px;
-            }
-
             img {
                 width: 30px;
                 padding-bottom: 10px;
@@ -163,13 +163,20 @@ input:focus {
 }
 
 .contact {
-    // display: flex;
     text-align: center;
     justify-content: center;
-    // -webkit-box-align: center;
     align-items: center;
     border-radius: 16px;
     padding: 100px 0px;
+
+    .button-primary {
+        margin-top: 20px;
+        width: 260px;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+    }
 }
 
 footer {
@@ -184,11 +191,23 @@ footer {
 
 @media screen and (max-width: 740px) {
 
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
     .generate-password {
         display: block;
         padding: 100px 10px;
 
-        .char-checkbox{
+        .char-checkbox {
             display: block;
         }
 
@@ -196,8 +215,8 @@ footer {
             width: 90%;
         }
 
-        .input-range{
-            .slider{
+        .input-range {
+            .slider {
                 width: 350px;
             }
         }
@@ -206,12 +225,8 @@ footer {
     .about {
         padding: 100px 10px;
 
-        .ant-col{
+        .about-col {
             padding: 8px;
-        }
-
-        h1 {
-            font-size: 40px;
         }
     }
 }
