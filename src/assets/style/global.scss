@@ -57,6 +57,13 @@ input:focus {
     padding: 100px 0px;
     text-align: center;
 
+    .sync-button {
+        height: 70px;
+        width: 85px;
+        position: relative;
+        left: 20px;
+    }
+
     p {
         padding-bottom: 50px;
     }

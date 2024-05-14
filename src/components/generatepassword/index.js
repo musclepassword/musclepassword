@@ -113,7 +113,7 @@ const GeneratePassword = () => {
                         <CopyOutlined style={{ fontSize: 20 }} />
                     </Button>
                 </Tooltip>
-                <Button className="button-transparent" type="link" onClick={() => generatePassword()}>
+                <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
                     <SyncOutlined style={{ fontSize: 20 }} />
                 </Button>
             </div>
