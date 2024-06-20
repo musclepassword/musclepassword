@@ -9,8 +9,8 @@ const Contact = () => {
     return (
         <div className="container">
             <section className="contact">
-                <h1>{i18n.t('Contact for support !')}</h1>
-                <p>I am developing the project, I am open to your ideas.</p>
+                <h1>{i18n.t('contact_for_support')}</h1>
+                <p>{i18n.t('contact_description')}</p>
                 <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword"> <GithubOutlined />Github</Button>
             </section>
         </div>
