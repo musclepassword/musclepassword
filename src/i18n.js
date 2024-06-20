@@ -9,6 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     // lng: 'tr', // if you're using a language detector, do not define the lng option
+    lng: 'en-US',
     fallbackLng: "en",
     ns: ["translations"],
     defaultNS: "translations",
