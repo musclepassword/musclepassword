@@ -11,7 +11,7 @@ const Contact = () => {
             <section className="contact">
                 <h1>{i18n.t('contact_for_support')}</h1>
                 <p>{i18n.t('contact_description')}</p>
-                <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword"> <GithubOutlined />Github</Button>
+                <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword" target="_blank"> <GithubOutlined />Github</Button>
             </section>
         </div>
     );
