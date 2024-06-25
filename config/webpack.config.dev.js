@@ -37,14 +37,14 @@ module.exports = {
                     'postcss-loader'
                 ],
             },
-            // {
-            //     test: /\.(ico|gif|png|jpg|jpeg|svg)$/i,
-            //     loader: 'url-loader',
-            //     options: {
-            //         limit: 8192, // 8KB'den küçük dosyalar base64 kodu olarak içe aktarılacak
-            //         name: 'assets/images/[name].[ext]',
-            //     },
-            // },
+            {
+                test: /\.(ico|gif|png|jpg|jpeg|svg)$/i,
+                loader: 'url-loader',
+                options: {
+                    limit: 8192, // 8KB'den küçük dosyalar base64 kodu olarak içe aktarılacak
+                    name: 'assets/images/[name].[ext]',
+                },
+            },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 loader: 'url-loader',

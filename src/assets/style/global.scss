@@ -176,6 +176,10 @@ input:focus {
     border-radius: 16px;
     padding: 100px 0px;
 
+    p{
+        margin-bottom: 50px;
+    }
+
     .button-primary {
         margin-top: 20px;
         width: 260px;
@@ -183,6 +187,7 @@ input:focus {
         justify-content: center;
         align-items: center;
         display: inline-flex;
+        margin: 5px;
     }
 }
 
