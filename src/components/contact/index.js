@@ -10,8 +10,8 @@ const Contact = () => {
     return (
         <div className="container">
             <section className="contact">
-                <h1>{i18n.t('Google Chrome Extension')}</h1>
-                <p>{i18n.t('Chrome extension will come soon, my work continues')}</p>
+                <h1>{i18n.t('google_chrome_extension')}</h1>
+                <p>{i18n.t('google_chrome_extension_desc')}</p>
                 <img src={logo} alt="chrome_image" />
             </section>
             <section className="contact">
