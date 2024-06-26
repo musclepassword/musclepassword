@@ -169,11 +169,22 @@ input:focus {
     }
 }
 
+.chrome_extension {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    background-color: rgb(241, 248, 255, .4);
+
+    p{
+        margin-bottom: 50px;
+    }
+}
+
 .contact {
     text-align: center;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
     padding: 100px 0px;
 
     p{
@@ -199,6 +210,7 @@ footer {
     display: flex;
     text-align: center;
     padding: 80px 0px;
+    border-top: 2px dashed #a8d3ff;
 }
 
 @media screen and (max-width: 740px) {
