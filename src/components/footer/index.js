@@ -3,7 +3,7 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div>Copyright © 2024 Muscle Password</div>
-                <div><a href="http://cuneydbolukoglu.com" target="_blank">Cüneyd BÖLÜKOĞLU</a></div>
+                <div><a href="http://cuneydbolukoglu.com" target="_blank">Development by Cüneyd BÖLÜKOĞLU</a></div>
             </div>
         </footer>
     );
