@@ -1,5 +1,6 @@
 {
   "name": "musclepassword",
+  "homepage": "https://musclepassword.com/test/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "css-minimizer-webpack-plugin": "^6.0.0",
     "detect-port": "^1.6.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "postcss-preset-env": "^9.4.0",
     "sass": "^1.71.1",
@@ -47,7 +49,9 @@
     "start": "node scripts/start.js",
     "build": "webpack --config config/webpack.config.prod.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
