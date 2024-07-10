@@ -211,6 +211,11 @@ footer {
     text-align: center;
     padding: 80px 0px;
     border-top: 2px dashed #a8d3ff;
+
+    .footer-text{
+        font-size: 13px;
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 740px) {
