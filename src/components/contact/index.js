@@ -1,8 +1,10 @@
-import React from "react";
-import { Button } from "antd";
-import { GithubOutlined, EditOutlined } from "@ant-design/icons";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 import logo from '../../assets/image/chrome-extensions.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const Contact = () => {
     const { i18n } = useTranslation();
@@ -20,8 +22,8 @@ const Contact = () => {
                 <section className="contact">
                     <h1>{i18n.t('contact_for_support')}</h1>
                     <p>{i18n.t('contact_description')}</p>
-                    <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword" target="_blank"> <GithubOutlined />Github</Button>
-                    <Button className="button-primary" size="large" href="mailto:cuneydbolukogluu@gmail.com" target="_blank"> <EditOutlined />  Email</Button>
+                    <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword" target="_blank"><FontAwesomeIcon icon={faGithub} />Github</Button>
+                    <Button className="button-primary" size="large" href="mailto:cuneydbolukogluu@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} />Email</Button>
                 </section>
             </div>
         </>

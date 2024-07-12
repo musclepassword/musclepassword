@@ -7,7 +7,7 @@ const Header = () => {
         <div className="container">
             <header>
                 <div className="logo">
-                    <b style={{ fontSize: 25 }}><LockOutlined  /> Muscle</b> Password
+                    <b style={{ fontSize: 25 }}><LockOutlined /> Muscle</b> Password
                 </div>
                 <SelectLang />
             </header>

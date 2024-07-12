@@ -26,6 +26,7 @@ h2 {
 
 h3 {
     font-size: 25px;
+    font-weight: 600;
 }
 
 header {
@@ -199,6 +200,10 @@ input:focus {
         align-items: center;
         display: inline-flex;
         margin: 5px;
+    }
+
+    svg {
+        margin-right: 5px;    
     }
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Row, Col } from 'antd';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFingerprint, faKey, faRulerHorizontal } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
     const { i18n } = useTranslation();
@@ -12,7 +14,7 @@ const About = () => {
                 <Row className="about-row" gutter={16}>
                     <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h3>{i18n.t('long')}</h3>}
+                            title={<h3><FontAwesomeIcon icon={faRulerHorizontal} color="#1677ff" size="xs"/> {i18n.t('long')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('long_desc')}</p>
@@ -20,7 +22,7 @@ const About = () => {
                     </Col>
                     <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h3>{i18n.t('complex')}</h3>}
+                            title={<h3><FontAwesomeIcon icon={faKey} color="#1677ff" size="xs"/> {i18n.t('complex')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('complex_desc')}</p>
@@ -28,7 +30,7 @@ const About = () => {
                     </Col>
                     <Col className="about-col" sm={24} md={8}>
                         <Card
-                            title={<h3>{i18n.t('unique')}</h3>}
+                            title={<h3><FontAwesomeIcon icon={faFingerprint} color="#1677ff" size="xs"/> {i18n.t('unique')}</h3>}
                             bordered={false}
                         >
                             <p>{i18n.t('unique_desc')}</p>
