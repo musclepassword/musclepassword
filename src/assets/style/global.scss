@@ -52,17 +52,21 @@ input:focus {
 
 .generate-password {
     color: #1d1d22;
-    justify-content: center;
-    align-items: center;
-    display: grid;
     padding: 100px 0px;
     text-align: center;
+
+    .copy-button{
+        width: 400px;
+        height: 60px;
+        margin: 70px;
+    }
 
     .sync-button {
         height: 70px;
         width: 85px;
         position: relative;
         left: 20px;
+        border-radius: 0;
     }
 
     p {
@@ -141,7 +145,6 @@ input:focus {
         align-items: center;
         margin-top: 70px;
     }
-
 }
 
 .about {
@@ -177,7 +180,7 @@ input:focus {
     padding: 100px 0px;
     background-color: rgb(241, 248, 255, .4);
 
-    p{
+    p {
         margin-bottom: 50px;
     }
 }
@@ -188,7 +191,7 @@ input:focus {
     align-items: center;
     padding: 100px 0px;
 
-    p{
+    p {
         margin-bottom: 50px;
     }
 
@@ -203,7 +206,7 @@ input:focus {
     }
 
     svg {
-        margin-right: 5px;    
+        margin-right: 5px;
     }
 }
 
@@ -217,7 +220,7 @@ footer {
     padding: 80px 0px;
     border-top: 2px dashed #a8d3ff;
 
-    .footer-text{
+    .footer-text {
         font-size: 13px;
         padding-top: 10px;
     }
@@ -246,13 +249,23 @@ footer {
         }
 
         .input-password {
-            width: 90%;
+            width: 87%;
         }
 
         .input-range {
             .slider {
-                width: 350px;
+                width: 270px;
             }
+        }
+
+        .copy-button {
+            width: 320px;
+            height: 60px;
+            margin: 40px 0px;
+        }
+
+        label{
+            font-size: 18px;
         }
     }
 

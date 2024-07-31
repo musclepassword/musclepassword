@@ -23,7 +23,7 @@ const Contact = () => {
                     <h1>{i18n.t('contact_for_support')}</h1>
                     <p>{i18n.t('contact_description')}</p>
                     <Button className="button-primary" type="primary" size="large" href="https://github.com/musclepassword" target="_blank"><FontAwesomeIcon icon={faGithub} />Github</Button>
-                    <Button className="button-primary" size="large" href="mailto:cuneydbolukogluu@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} />Email</Button>
+                    <Button className="button-primary" size="large" href="mailto:cuneydbolukogluu@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} />{i18n.t('email')}</Button>
                 </section>
             </div>
         </>

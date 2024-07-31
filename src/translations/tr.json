@@ -18,6 +18,8 @@
         "contact_for_support": "Destek için iletişime geçin !",
         "contact_description": "Projeyi geliştiriyorum, fikirlerinize açığım",
         "google_chrome_extension": "Google Chrome Eklentisi",
-        "google_chrome_extension_desc": "Chrome eklentisi yakında gelecek, çalışmalarım devam ediyor"
+        "google_chrome_extension_desc": "Chrome eklentisi yakında gelecek, çalışmalarım devam ediyor",
+        "copy_password": "Şifreyi Kopyala",
+        "email": "E-Posta"
     }
 }
