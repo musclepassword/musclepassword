@@ -132,7 +132,7 @@ const GeneratePassword = () => {
                     ))}
                 </div>
                 <Button type="primary" className="copy-button" onClick={() => generatePassword()}>
-                    {i18n.t('Generate')}
+                    {i18n.t('generate_password')}
                 </Button>
             </div>
         </section>

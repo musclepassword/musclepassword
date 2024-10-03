@@ -20,6 +20,7 @@
         "google_chrome_extension": "Google Chrome Extension",
         "google_chrome_extension_desc": "Chrome extension will come soon, my work continues",
         "copy_password": "Copy Password",
-        "email": "E-Mail"
+        "email": "E-Mail",
+        "generate_password": "Generate Password"
     }
 }
