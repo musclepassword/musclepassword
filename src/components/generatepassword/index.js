@@ -131,11 +131,9 @@ const GeneratePassword = () => {
                         </Checkbox>
                     ))}
                 </div>
-                <Tooltip title={<span><CheckCircleOutlined /> {i18n.t('password_copied')}</span>} trigger="click">
-                    <Button type="primary" className="copy-button" onClick={() => copyClipboard()}>
-                        {i18n.t('copy_password')}
-                    </Button>
-                </Tooltip>
+                <Button type="primary" className="copy-button" onClick={() => generatePassword()}>
+                    {i18n.t('Generate')}
+                </Button>
             </div>
         </section>
     );
