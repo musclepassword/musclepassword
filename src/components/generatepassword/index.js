@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
-import { SyncOutlined, CopyOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import { Button, Input, Checkbox, Slider } from 'antd';
+import { SyncOutlined, CopyOutlined, CheckOutlined } from '@ant-design/icons';
 import { useTranslation } from "react-i18next";
 
 const getGradientColor = (percentage) => {
@@ -114,11 +114,9 @@ const GeneratePassword = () => {
                 </div>
                 <div className="input-password">
                     <Input className="input-text" type="text" variant="borderless" value={password} />
-                    {/* <Tooltip title={<span><CheckCircleOutlined /> {i18n.t('password_copied')}</span>} color="green" trigger="click"> */}
-                        <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
-                            {copied ? <CheckOutlined style={{ fontSize: 20 }} /> : <CopyOutlined style={{ fontSize: 20 }} />}
-                        </Button>
-                    {/* </Tooltip> */}
+                    <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
+                        {copied ? <CheckOutlined style={{ fontSize: 20 }} /> : <CopyOutlined style={{ fontSize: 20 }} />}
+                    </Button>
                     <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
                         <SyncOutlined style={{ fontSize: 20 }} />
                     </Button>
