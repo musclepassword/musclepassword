@@ -18,6 +18,7 @@ const GeneratePassword = () => {
     const { i18n } = useTranslation();
     const [password, setPassword] = useState("");
     const [length, setLength] = useState(15);
+    const [copied, setCopied] = useState(false);
     const [checkBoxList, setCheckBoxList] = useState([
         { name: 'uppercase', value: 'ABC', default: true, character: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' },
         { name: 'lowercase', value: 'abc', default: true, character: 'abcdefghijklmnopqrstuvwxyz' },
@@ -58,6 +59,10 @@ const GeneratePassword = () => {
 
     const copyClipboard = () => {
         navigator.clipboard.writeText(password);
+
+        setCopied(true);
+
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const handleCheckboxChange = (value, checked) => {
@@ -109,11 +114,11 @@ const GeneratePassword = () => {
                 </div>
                 <div className="input-password">
                     <Input className="input-text" type="text" variant="borderless" value={password} />
-                    <Tooltip title={<span><CheckCircleOutlined /> {i18n.t('password_copied')}</span>} color="green" trigger="click">
+                    {/* <Tooltip title={<span><CheckCircleOutlined /> {i18n.t('password_copied')}</span>} color="green" trigger="click"> */}
                         <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
-                            <CopyOutlined style={{ fontSize: 20 }} />
+                            {copied ? <CheckOutlined style={{ fontSize: 20 }} /> : <CopyOutlined style={{ fontSize: 20 }} />}
                         </Button>
-                    </Tooltip>
+                    {/* </Tooltip> */}
                     <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
                         <SyncOutlined style={{ fontSize: 20 }} />
                     </Button>
