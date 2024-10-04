@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Checkbox, Slider } from 'antd';
+import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
 import { SyncOutlined, CopyOutlined, CheckOutlined } from '@ant-design/icons';
 import { useTranslation } from "react-i18next";
 
