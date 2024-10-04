@@ -114,9 +114,11 @@ const GeneratePassword = () => {
                 </div>
                 <div className="input-password">
                     <Input className="input-text" type="text" variant="borderless" value={password} />
-                    <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
-                        {copied ? <CheckOutlined style={{ fontSize: 20 }} /> : <CopyOutlined style={{ fontSize: 20 }} />}
-                    </Button>
+                    <Tooltip title={i18n.t('copy')}>
+                        <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
+                            {copied ? <CheckOutlined style={{ fontSize: 20 }} /> : <CopyOutlined style={{ fontSize: 20 }} />}
+                        </Button>
+                    </Tooltip>
                     <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
                         <SyncOutlined style={{ fontSize: 20 }} />
                     </Button>

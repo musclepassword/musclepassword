@@ -21,6 +21,7 @@
         "google_chrome_extension_desc": "Chrome eklentisi yakında gelecek, çalışmalarım devam ediyor",
         "copy_password": "Şifreyi Kopyala",
         "email": "E-Posta",
-        "generate_password": "Şifre Oluştur"
+        "generate_password": "Şifre Oluştur",
+        "copy": "Kopyala"
     }
 }
