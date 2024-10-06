@@ -98,8 +98,8 @@ const GeneratePassword = () => {
                         defaultValue={value}
                         onChange={(e) => setValue(e) || setLength(e)}
                         className="slider"
-                        min={3}
-                        max={50}
+                        min={4}
+                        max={32}
                         styles={{
                             track: {
                                 background: 'transparent',
