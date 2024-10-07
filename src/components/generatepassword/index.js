@@ -96,7 +96,7 @@ const GeneratePassword = () => {
                     <label>{i18n.t('password_length') + ': '}<b>{length}</b></label>
                     <Slider
                         defaultValue={value}
-                        onChange={(e) => setValue(e) || setLength(e)}
+                        onChange={(e) => setValue(e) || generatePassword(e)}
                         className="slider"
                         min={4}
                         max={32}
