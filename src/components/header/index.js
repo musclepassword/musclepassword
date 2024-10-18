@@ -1,5 +1,5 @@
 import SelectLang from "../SelectLang";
-import { LockOutlined } from "@ant-design/icons";
+import Logo from "../../assets/image/musclepassword-logo.png"
 
 const Header = () => {
 
@@ -7,7 +7,7 @@ const Header = () => {
         <div className="container">
             <header>
                 <div className="logo">
-                    <b style={{ fontSize: 25 }}><LockOutlined /> Muscle</b> Password
+                    <img src={Logo} alt="logo" /><h1><b>Muscle</b> <span>Password</span></h1>
                 </div>
                 <SelectLang />
             </header>

@@ -35,6 +35,25 @@ header {
     align-items: center;
     display: flex;
     padding: 50px 30px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 100px;
+        }
+
+        h1 {
+            font-size: 25px;
+            color: #53bbfa;
+        }
+
+        span {
+            font-size: 20px;
+            color: #47a4f4;
+        }
+    }
 }
 
 .container {
@@ -55,7 +74,7 @@ input:focus {
     padding: 100px 0px;
     text-align: center;
 
-    .copy-button{
+    .copy-button {
         width: 400px;
         height: 60px;
         margin: 70px;
@@ -264,7 +283,7 @@ footer {
             margin: 40px 0px;
         }
 
-        label{
+        label {
             font-size: 18px;
         }
     }
