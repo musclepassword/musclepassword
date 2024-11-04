@@ -25,6 +25,7 @@ const GeneratePassword = () => {
         { name: 'digits', value: '123', default: true, character: '0123456789' },
         { name: 'symbols', value: '#$&', default: false, character: '!@#$%^&' },
     ]);
+    const [strength, setStrength] = useState('');
     const [char, setChar] = useState(() => {
         let initialChar = '';
         checkBoxList.map(item => {
@@ -50,11 +51,12 @@ const GeneratePassword = () => {
         setLength(e ? e : length);
         let initialLength = e ? e : length;
 
-        let retVal = "";
+        let initialPassword = "";
         for (var i = 0, n = char.length; i < initialLength; ++i) {
-            retVal += char.charAt(Math.floor(Math.random() * n));
+            initialPassword += char.charAt(Math.floor(Math.random() * n));
         }
-        setPassword(retVal);
+        evaluatePassword(initialPassword)
+        setPassword(initialPassword);
     };
 
     const copyClipboard = () => {
@@ -86,6 +88,34 @@ const GeneratePassword = () => {
         });
         setChar(updatedChar);
     };
+
+    const evaluatePassword = (password) => {
+        let score = 0;
+
+        // Uzunluk
+        if (password.length >= 8) score += 1;
+        if (password.length >= 12) score += 1;
+
+        // Büyük ve küçük harf içeriyor mu?
+        if (/[a-z]/.test(password) && /[A-Z]/.test(password)) score += 1;
+
+        // Rakam içeriyor mu?
+        if (/\d/.test(password)) score += 1;
+
+        // Özel karakter içeriyor mu?
+        if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) score += 1;
+
+        // Gücü belirleme
+        if (score <= 1) {
+            setStrength('Zayıf');
+        } else if (score === 2) {
+            setStrength('Orta');
+        } else if (score === 3) {
+            setStrength('Strong');
+        } else if (score >= 4) {
+            setStrength('Very Strong');
+        }
+    }
 
     return (
         <section className="generate-password">
@@ -122,6 +152,9 @@ const GeneratePassword = () => {
                     <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
                         <SyncOutlined style={{ fontSize: 20 }} />
                     </Button>
+                </div>
+                <div>
+                    {strength}
                 </div>
                 <div className="char-checkbox">
                     {checkBoxList.map((item, key) => (
