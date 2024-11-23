@@ -16,15 +16,22 @@ a {
 }
 
 h1 {
-    font-size: 30px;
+    padding-top: 8px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #939393;
 }
 
 h2 {
+    font-size: 30px;
+}
+
+h3 {
     font-size: 45px;
     text-align: center;
 }
 
-h3 {
+h4 {
     font-size: 25px;
     font-weight: 600;
 }
@@ -36,22 +43,26 @@ header {
     display: flex;
     padding: 50px 30px;
 
+    a {
+        color: unset;
+    }
+
+    a:hover {
+        color: unset;
+    }
+
     .logo {
         display: flex;
         align-items: center;
 
-        img {
-            max-width: 100px;
-        }
-
         h1 {
-            font-size: 25px;
-            color: #53bbfa;
+            span {
+                font-weight: bold;
+            }
         }
 
-        span {
-            font-size: 20px;
-            color: #47a4f4;
+        img {
+            width: 100px;
         }
     }
 }
@@ -164,6 +175,17 @@ input:focus {
         align-items: center;
         margin-top: 70px;
     }
+
+    .strength {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 20px;
+
+        img {
+            margin-right: 5px;
+        }
+    }
 }
 
 .about {
@@ -213,20 +235,16 @@ input:focus {
     p {
         margin-bottom: 50px;
     }
+}
 
-    .button-primary {
-        margin-top: 20px;
-        width: 260px;
-        height: 55px;
-        justify-content: center;
-        align-items: center;
-        display: inline-flex;
-        margin: 5px;
-    }
-
-    svg {
-        margin-right: 5px;
-    }
+.button-primary {
+    margin-top: 20px;
+    width: 260px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    margin: 5px;
 }
 
 footer {
@@ -248,15 +266,29 @@ footer {
 @media screen and (max-width: 740px) {
 
     h1 {
-        font-size: 30px;
+        font-size: 15px;
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     h3 {
+        font-size: 35px;
+    }
+
+    h4 {
         font-size: 20px;
+    }
+
+    header {
+        padding: 50px 0;
+
+        .logo {
+            img {
+                max-width: 50px;
+            }
+        }
     }
 
     .generate-password {
