@@ -27,8 +27,8 @@ const SelectLang = () => {
 
     return (
         <Dropdown menu={{ items: langMenu, selectedKeys: selectLang }} placement="bottomRight" arrow>
-            <Space>
-                <GlobalOutlined />
+            <Space style={{ cursor: 'pointer' }} >
+               {localStorage.getItem('i18nextLng').substr(0,2).toLocaleUpperCase()}<GlobalOutlined />
             </Space>
         </Dropdown>
     );
