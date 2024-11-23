@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Checkbox, Slider, Tooltip } from 'antd';
+import { Button, Input, Switch, Slider, Tooltip } from 'antd';
 import { SyncOutlined, CopyOutlined, CheckOutlined } from '@ant-design/icons';
 import { useTranslation } from "react-i18next";
-
-const getGradientColor = (percentage) => {
-    const startColor = [135, 208, 104];
-    const endColor = [255, 204, 199];
-    const midColor = startColor.map((start, i) => {
-        const end = endColor[i];
-        const delta = end - start;
-        return (start + delta * percentage).toFixed(0);
-    });
-    return `rgb(${midColor.join(',')})`;
-}
+import strong from '../../assets/image/strong.png';
+import weak from '../../assets/image/weak.png';
 
 const GeneratePassword = () => {
     const { i18n } = useTranslation();
@@ -75,7 +66,22 @@ const GeneratePassword = () => {
                 }
                 return item;
             });
-            return updatedList;
+
+            // Seçili öğeleri sayıyoruz
+            const activeSelections = updatedList.filter(item => item.default).length;
+
+            if (activeSelections === 1) {
+                // Eğer yalnızca bir öğe seçili ise, diğer öğeleri disable yapıyoruz
+                return updatedList.map(item => {
+                    if (item.default === false) {
+                        return { ...item, disabled: false };  // Eğer o öğe seçili değilse, onu aktif bırak
+                    }
+                    return { ...item, disabled: true };  // Seçili öğe dışındakiler disable olur
+                });
+            } else {
+                // Eğer birden fazla öğe seçili ise, tüm öğeleri aktif yapıyoruz
+                return updatedList.map(item => ({ ...item, disabled: false }));
+            }
         });
     };
 
@@ -107,20 +113,18 @@ const GeneratePassword = () => {
 
         // Gücü belirleme
         if (score <= 1) {
-            setStrength('Zayıf');
+            setStrength(<div className='strength'><img src={weak} alt='weak password' />{i18n.t('weak_password')}</div>);
         } else if (score === 2) {
-            setStrength('Orta');
-        } else if (score === 3) {
-            setStrength('Strong');
-        } else if (score >= 4) {
-            setStrength('Very Strong');
+            setStrength(<div className='strength'><img src={strong} alt='strong password' />{i18n.t('fairly_strong_password')}</div>);
+        } else if (score >= 3) {
+            setStrength(<div className='strength'><img src={strong} alt='strong password' />{i18n.t('strong_password')}</div>);
         }
     }
 
     return (
         <section className="generate-password">
             <div className="container">
-                <h1>{i18n.t('generate_password_title')}</h1>
+                <h2>{i18n.t('generate_password_title')}</h2>
                 <p>{i18n.t('generate_password_desc')}</p>
                 <div className="input-range">
                     <label>{i18n.t('password_length') + ': '}<b>{length}</b></label>
@@ -130,16 +134,6 @@ const GeneratePassword = () => {
                         className="slider"
                         min={4}
                         max={32}
-                        styles={{
-                            track: {
-                                background: 'transparent',
-                            },
-                            tracks: {
-                                background: `linear-gradient(to left, ${getGradientColor(start)} 0%, ${getGradientColor(
-                                    end,
-                                )} 100%)`,
-                            },
-                        }}
                     />
                 </div>
                 <div className="input-password">
@@ -158,15 +152,17 @@ const GeneratePassword = () => {
                 </div>
                 <div className="char-checkbox">
                     {checkBoxList.map((item, key) => (
-                        <Checkbox
-                            key={key}
-                            checked={item.default}
-                            onChange={(e) => {
-                                handleCheckboxChange(item.value, e.target.checked);
-                            }}
-                        >
-                            {i18n.t(item.name)}
-                        </Checkbox>
+                        <div>
+                            <span>{i18n.t(item.name) + ' (' + item.value + ')'}</span>{' '}
+                            <Switch
+                                key={key}
+                                defaultValue={item.default}
+                                disabled={item.disabled}
+                                onChange={(e) => {
+                                    handleCheckboxChange(item.value, e);
+                                }}
+                            />
+                        </div>
                     ))}
                 </div>
                 <Button type="primary" className="copy-button" onClick={() => generatePassword()}>
