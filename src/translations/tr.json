@@ -22,6 +22,11 @@
         "copy_password": "Şifreyi Kopyala",
         "email": "E-Posta",
         "generate_password": "Şifre Oluştur",
-        "copy": "Kopyala"
+        "copy": "Kopyala",
+        "discover-chrome-extension": "Chrome uzantısını keşfedin",
+        "add_to_chrome":  "CHROME'A EKLE",
+        "weak_password": "Zayıf şifre",
+        "fairly_strong_password": "Oldukça güçlü bir şifre",
+        "strong_password": "Güçlü şifre"
     }
 }

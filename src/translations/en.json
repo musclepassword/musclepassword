@@ -22,6 +22,11 @@
         "copy_password": "Copy Password",
         "email": "E-Mail",
         "generate_password": "Generate Password",
-        "copy": "Copy"
+        "copy": "Copy",
+        "discover-chrome-extension": "Discover Chrome Extension",
+        "add_to_chrome": "ADD TO CHROME",
+        "weak_password": "Weak password",
+        "fairly_strong_password": "Fairly strong password",
+        "strong_password": "Strong password"
     }
 }
