@@ -1,15 +1,12 @@
-import { Dropdown, Space } from 'antd';
+import { Dropdown, Button } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
-import { useTranslation } from "react-i18next";
 
-const SelectLang = () => {
-    const { i18n } = useTranslation();
+export default function SelectLang() {
 
     const changeLang = (lang) => {
-        i18n.changeLanguage(lang);
     };
 
-    const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
+    // const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
     const languageLabels = [
         { key: 'tr-TR', value: 'Türkçe' },
         { key: 'en-US', value: 'English' }
@@ -26,12 +23,10 @@ const SelectLang = () => {
     ));
 
     return (
-        <Dropdown menu={{ items: langMenu, selectedKeys: selectLang }} placement="bottomRight" arrow>
-            <Space style={{ cursor: 'pointer' }} >
-               {localStorage.getItem('i18nextLng').substr(0,2).toLocaleUpperCase()}<GlobalOutlined />
-            </Space>
+        <Dropdown menu={{ items: langMenu, selectedKeys: 'tr-TR' }} placement="bottomRight" arrow>
+            <Button style={{ color: 'white' }} type='link' shape='round' size='large'>
+                {'tr-TR'.substr(0, 2).toLocaleUpperCase()}<GlobalOutlined />
+            </Button>
         </Dropdown>
-    );
+    )
 }
-
-export default SelectLang;

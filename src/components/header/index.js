@@ -1,28 +1,33 @@
-import SelectLang from "../SelectLang";
-import Logo from "../../assets/image/musclepassword-logo.png"
-import { ChromeOutlined } from '@ant-design/icons';
-import { useTranslation } from "react-i18next";
+import Image from 'next/image';
+import Link from 'next/link'
+import { Button } from 'antd';
+import SelectLang from '../SelectLang';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChrome } from '@fortawesome/free-brands-svg-icons';
 
-const Header = () => {
-    const { i18n } = useTranslation();
+export default function Header() {
 
-    return (
-        <div className="container">
-            <header>
-                <div className="logo">
-                    <img src={Logo} alt="logo" />
-                    <span>
-                        <h1><span>MUSCLE</span><br /> PASSWORD</h1>
-                    </span>
-                </div>
-                <div>
-                    <a href={'https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk'} target="_blank">
-                    {i18n.t('add_to_chrome')} <ChromeOutlined />{' '}</a>
-                    <SelectLang />
-                </div>
-            </header>
+  return (
+    <div className="container">
+      <header>
+        <div className="logo">
+          <Image src="/logo.png" alt="logo" width={100} height={100} style={{ maxWidth: '100%', height: 'auto' }} priority />
+          <span>
+            <h1>
+              <div className='logo_first_title'>MUSCLE</div>
+              <div>PASSWORD</div>
+            </h1>
+          </span>
         </div>
-    );
-}
-
-export default Header;
+        <div>
+          <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
+            <Button shape='round' size='large' icon={<FontAwesomeIcon icon={faChrome} />}>
+              Get Extenstion
+            </Button>
+          </Link>
+          <SelectLang />
+        </div>
+      </header>
+    </div>
+  );
+};
