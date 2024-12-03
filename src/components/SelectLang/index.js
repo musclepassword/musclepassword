@@ -1,12 +1,26 @@
 import { Dropdown, Button } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
 export default function SelectLang() {
+    const [lang, setLang] = useState(null);
+    const router = useRouter();
+    const { locale } = router;
 
-    const changeLang = (lang) => {
+    useEffect(() => {
+        if (typeof window !== "undefined" && localStorage) {
+            const storedLang = localStorage.getItem("i18nextLng");
+            setLang(storedLang || "en-US");
+        }
+    }, [lang]);
+
+    const changeLanguage = (newLocale) => {
+        router.push(router.pathname, router.asPath, { locale: newLocale });
+        localStorage.setItem('i18nextLng', newLocale);
+        setLang(newLocale);
     };
 
-    // const selectLang = localStorage.getItem('i18nextLng') || 'tr-TR';
     const languageLabels = [
         { key: 'tr-TR', value: 'Türkçe' },
         { key: 'en-US', value: 'English' }
@@ -18,14 +32,14 @@ export default function SelectLang() {
             label: (
                 locale.value
             ),
-            onClick: () => changeLang(locale.key)
+            onClick: () => changeLanguage(locale.key)
         }
     ));
 
     return (
-        <Dropdown menu={{ items: langMenu, selectedKeys: 'tr-TR' }} placement="bottomRight" arrow>
+        <Dropdown menu={{ items: langMenu, selectedKeys: lang }} placement="bottomRight" arrow>
             <Button style={{ color: 'white' }} type='link' shape='round' size='large'>
-                {'tr-TR'.substr(0, 2).toLocaleUpperCase()}<GlobalOutlined />
+                {lang?.substr(0, 2).toLocaleUpperCase()}<GlobalOutlined />
             </Button>
         </Dropdown>
     )
