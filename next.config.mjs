@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: [
@@ -7,6 +8,9 @@ const nextConfig = {
     "@rc-component",
     "antd",
     "rc-util",
+    "react-i18next",
+    "rc-pagination",
+    "rc-picker"
   ],
 };
 

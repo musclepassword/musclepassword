@@ -1,15 +1,11 @@
-const LocizeBackend = require('i18next-locize-backend/cjs')
-const LocalStorageBackend = require('i18next-localstorage-backend').default
-const isBrowser = typeof window !== 'undefined'
+const path = require('path');
 
 module.exports = {
-    i18n: {
-        locales: ["en", "tr"], // Desteklenen diller
-        defaultLocale: "en",   // Varsayılan dil
-        localeDetection: true, // Dil otomatik algılama
-        debug: true,
-        backend: {
-            backends: isBrowser ? [LocalStorageBackend, LocizeBackend] : [],
-          },
-    },
+  i18n: {
+    locales: ['en', 'tr'], // Desteklenen diller
+    defaultLocale: 'en', // Varsayılan dil
+    localePath: path.resolve('./public/locales'), // Dil dosyalarının yolu
+    localeDetection: false, // Otomatik dil algılama devre dışı
+    debug: true,
+  },
 };
