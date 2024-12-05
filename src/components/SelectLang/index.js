@@ -9,18 +9,19 @@ export default function SelectLang() {
     const router = useRouter();
     const { locale } = router;
 
-    // useEffect(() => {
-    //     if (typeof window !== "undefined" && localStorage) {
-    //         const storedLang = localStorage.getItem("i18nextLng");
-    //         setLang(storedLang || "en-US");
-    //     }
-    // }, [lang]);
+    // Tarayıcıda kayıtlı dili veya varsayılan dili al
+    useEffect(() => {
+        if (typeof window !== "undefined" && localStorage) {
+            const storedLang = localStorage.getItem("i18nextLng") || "en";
+            setLang(storedLang);
+            i18n.changeLanguage(storedLang); // Sayfa yüklendiğinde i18n dilini ayarla
+        }
+    }, []);
 
     const changeLanguage = (newLocale) => {
-        router.push(router.pathname, router.asPath, { locale: newLocale });
-        localStorage.setItem('i18nextLng', newLocale);
-        setLang(newLocale);
-        i18n.changeLanguage(lang);
+        localStorage.setItem('i18nextLng', newLocale); // Yeni dili kaydet
+        setLang(newLocale); // State'i güncelle
+        i18n.changeLanguage(newLocale); // i18n dilini değiştir
     };
 
     const languageLabels = [
@@ -39,10 +40,10 @@ export default function SelectLang() {
     ));
 
     return (
-        <Dropdown menu={{ items: langMenu, selectedKeys: lang }} placement="bottomRight" arrow>
+        <Dropdown menu={{ items: langMenu, selectedKeys: [lang] }} placement="bottomRight" arrow>
             <Button style={{ color: 'white' }} type='link' shape='round' size='large'>
-                {lang?.substr(0, 2).toLocaleUpperCase()}<GlobalOutlined />
+                {lang?.substr(0, 2).toLocaleUpperCase()} <GlobalOutlined />
             </Button>
         </Dropdown>
-    )
+    );
 }
