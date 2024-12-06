@@ -16,8 +16,9 @@ h1 {
 
 h2 {
     font-size: 41px;
-    font-weight: bold;
+    font-weight: bold !important;
     line-height: 2.05;
+    margin: 0 !important;
 }
 
 .container {
