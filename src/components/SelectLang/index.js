@@ -1,27 +1,23 @@
 import { Dropdown, Button } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import i18n from '../../i18n';
 
 export default function SelectLang() {
     const [lang, setLang] = useState(null);
-    const router = useRouter();
-    const { locale } = router;
 
-    // Tarayıcıda kayıtlı dili veya varsayılan dili al
     useEffect(() => {
         if (typeof window !== "undefined" && localStorage) {
             const storedLang = localStorage.getItem("i18nextLng") || "en";
             setLang(storedLang);
-            i18n.changeLanguage(storedLang); // Sayfa yüklendiğinde i18n dilini ayarla
+            i18n.changeLanguage(storedLang);
         }
     }, []);
 
     const changeLanguage = (newLocale) => {
-        localStorage.setItem('i18nextLng', newLocale); // Yeni dili kaydet
-        setLang(newLocale); // State'i güncelle
-        i18n.changeLanguage(newLocale); // i18n dilini değiştir
+        localStorage.setItem('i18nextLng', newLocale);
+        setLang(newLocale);
+        i18n.changeLanguage(newLocale);
     };
 
     const languageLabels = [
@@ -42,7 +38,7 @@ export default function SelectLang() {
     return (
         <Dropdown menu={{ items: langMenu, selectedKeys: [lang] }} placement="bottomRight" arrow>
             <Button style={{ color: 'white' }} type='link' shape='round' size='large'>
-                {lang?.substr(0, 2).toLocaleUpperCase()} <GlobalOutlined />
+                {lang?.toLocaleUpperCase()} <GlobalOutlined />
             </Button>
         </Dropdown>
     );
