@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import i18n from '../../i18n';
 import { useTranslation } from 'react-i18next';
+import GeneratePassword from '../GeneratePassword';
 
 export default function HomeSection() {
     const { t, i18n } = useTranslation('common');
@@ -22,11 +22,13 @@ export default function HomeSection() {
 
     return (
         <section className="home-section">
-            <article>
-                <h2>Strong Random Password Generator</h2>
-                <p>Generate strong passwords using random password generator</p>
-                <p>{t("welcome")}</p>
-            </article>
+            <div className="container">
+                <article>
+                    <h2>{t("Strong Random Password Generator")}</h2>
+                    <p>{t("Generate strong passwords using random password generator")}</p>
+                </article>
+                <GeneratePassword />
+            </div>
         </section>
     );
 }

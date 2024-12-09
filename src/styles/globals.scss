@@ -62,11 +62,103 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 
-    p{
+    article{
         text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color: #939393;
+        
+        p {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #939393;
+        }
+    }
+}
+
+.generate-password {
+    width: 100%;
+    color: #1d1d22;
+    text-align: center;
+
+    .copy-button {
+        width: 400px;
+        height: 71px;
+        margin-top: 30px;
+    }
+
+    .sync-button {
+        width: 70px;
+        height: 100%;
+        position: relative;
+        border-radius: 0;
+    }
+
+    p {
+        padding-bottom: 50px;
+    }
+
+    .input-range {
+        justify-content: center;
+        display: flex;
+        margin: 10px 0;
+
+        .slider {
+            width: 400px;
+        }
+
+        b {
+            margin: 5px;
+            font-size: 18px;
+        }
+    }
+
+    .input-password {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background: #fff;
+        border: 1px solid #eee;
+        margin: 0 auto;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 3px 9px #0000000F;
+        width: 741px;
+        height: 71px;
+        margin-bottom: 80px;
+
+        .input-text {
+            color: #2a2a33;
+            position: relative;
+            font-size: 19px;
+            border-radius: 15px;
+            border: none;
+        }
+    }
+
+    label {
+        user-select: none;
+        font-size: 18px;
+    }
+
+    .char-checkbox {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+
+        div {
+            margin-right: 20px;
+        }
+    }
+
+    .strength {
+        text-align: center;
+        margin-top: 20px;
+
+        img {
+            margin-right: 5px;
+        }
     }
 }

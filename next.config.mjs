@@ -10,7 +10,11 @@ const nextConfig = {
     "rc-util",
     "react-i18next",
     "rc-pagination",
-    "rc-picker"
+    "rc-picker",
+    "rc-input",
+    "rc-button",
+    "rc-slider",
+    "rc-tooltip"
   ],
 };
 

@@ -4,8 +4,10 @@ import { Button } from 'antd';
 import SelectLang from '../SelectLang';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChrome } from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+  const { t } = useTranslation('common');
 
   return (
     <div className="container">
@@ -22,7 +24,7 @@ export default function Header() {
         <span>
           <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
             <Button shape='round' size='large' icon={<FontAwesomeIcon icon={faChrome} />}>
-              Get Extenstion
+              {t("Add to Chrome")}
             </Button>
           </Link>
           <SelectLang />
