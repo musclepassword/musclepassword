@@ -25,7 +25,7 @@ export default function HomeSection() {
             <div className="container">
                 <article>
                     <h2>{t("Strong Random Password Generator")}</h2>
-                    <p>{t("Generate strong passwords using random password generator")}</p>
+                    <h3>{t("Generate strong passwords using random password generator")}</h3>
                 </article>
                 <GeneratePassword />
             </div>

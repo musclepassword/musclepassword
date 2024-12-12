@@ -111,7 +111,7 @@ export default function GeneratePassword() {
 
         // Gücü belirleme
         if (score <= 1) {
-            setStrength(<div className='strength'><Image src="/images/weak.png" alt="weak password" width={24} height={24} /></div>);
+            setStrength(<div className='strength'><Image src="/images/weak.png" alt="weak password" width={24} height={24} />{t('Weak password')}</div>);
         } else if (score === 2) {
             setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />Fairly strong password</div>);
         } else if (score >= 3) {
@@ -122,7 +122,7 @@ export default function GeneratePassword() {
     return (
         <section className="generate-password">
             {strength}
-            {t("Password Length")} : <b>{length}</b>
+            <p className='length'>{t("Password Length")}: <b>{length}</b></p>
             <div className="input-range">
                 <Slider
                     defaultValue={value}
@@ -133,9 +133,9 @@ export default function GeneratePassword() {
                 />
             </div>
             <div className="input-password">
-                <Input className="input-text" type="text" variant="borderless" value={password} />
+                <Input type="text" variant="borderless" value={password} />
                 <Tooltip title="Copy">
-                    <Button className="button-transparent" type="link" onClick={() => copyClipboard()}>
+                    <Button className="copy-button" type="link" onClick={() => copyClipboard()}>
                         {copied ? <FontAwesomeIcon icon={faCheckCircle} /> : <FontAwesomeIcon icon={faCopy} />}
                     </Button>
                 </Tooltip>
@@ -158,7 +158,7 @@ export default function GeneratePassword() {
                     </div>
                 ))}
             </div>
-            <Button type="primary" className="copy-button" onClick={() => generatePassword()}>
+            <Button type="primary" className="generate-button" onClick={() => generatePassword()}>
                 Generate Password
             </Button>
         </section>

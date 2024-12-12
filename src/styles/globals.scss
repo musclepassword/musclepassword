@@ -8,7 +8,7 @@
 }
 
 h1 {
-    padding-top: 10px;
+    padding-top: 19px;
     font-size: 20px;
     font-weight: 500;
     color: #939393;
@@ -19,6 +19,12 @@ h2 {
     font-weight: bold !important;
     line-height: 2.05;
     margin: 0 !important;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #939393;
 }
 
 .container {
@@ -37,18 +43,15 @@ header {
     display: flex;
     padding: 53px 0px;
     font-size: 20px;
+    z-index: 2;
 
-    span {
+    .logo {
         display: flex;
-    }
-}
+        align-items: center;
 
-.logo {
-    display: flex;
-    align-items: center;
-
-    .logo_first_title {
-        font-weight: bold;
+        .logo-first {
+            font-weight: 800;
+        }
     }
 }
 
@@ -57,7 +60,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
@@ -68,101 +71,89 @@ header {
     display: flex;
     flex-direction: column;
 
-    article{
+    article {
         text-align: center;
-
-        p {
-            text-align: center;
-            font-size: 20px;
-            font-weight: 500;
-            color: #939393;
-        }
+        margin-right: 46px;
     }
 }
 
 .generate-password {
     width: 100%;
-    color: #1d1d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
 
-    .copy-button {
-        width: 400px;
-        height: 71px;
-        margin-top: 30px;
+    .strength {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 17px;
     }
 
-    .sync-button {
-        width: 70px;
-        height: 100%;
-        position: relative;
-        border-radius: 0;
-    }
-
-    p {
-        padding-bottom: 50px;
+    .length {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 13px;
     }
 
     .input-range {
-        justify-content: center;
-        display: flex;
-        margin: 10px 0;
-
-        .slider {
-            width: 400px;
-        }
-
-        b {
-            margin: 5px;
-            font-size: 18px;
-        }
+        width: 400px;
     }
 
     .input-password {
+        position: relative;
+        width: 841px;
+        height: 71px;
+        border-radius: 15px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background-color: #fff;
+        padding-left: 43px;
         justify-content: center;
         align-items: center;
         display: flex;
-        background: #fff;
-        border: 1px solid #eee;
-        margin: 0 auto;
-        border-radius: 15px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 3px 9px #0000000F;
-        width: 741px;
-        height: 71px;
-        margin-bottom: 80px;
+        margin-bottom: 222px;
 
-        .input-text {
-            color: #2a2a33;
-            position: relative;
-            font-size: 19px;
-            border-radius: 15px;
-            border: none;
+        input {
+            font-size: 23px;
+            font-weight: 500;
         }
-    }
 
-    label {
-        user-select: none;
-        font-size: 18px;
+        svg {
+            font-size: 21px;
+        }
+
+        .copy-button {
+            position: absolute;
+            height: 100%;
+            right: 71px;
+        }
+
+        .sync-button {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            border-radius: 0;
+        }
     }
 
     .char-checkbox {
-        align-items: center;
         display: flex;
-        justify-content: space-between;
-        margin-top: 70px;
+        justify-content: center;
 
         div {
-            margin-right: 20px;
+            margin-bottom: 17px;
+        }
+
+        div:not(:last-child) {
+            margin-right: 214px;
         }
     }
 
-    .strength {
-        text-align: center;
-        margin-top: 20px;
-
-        img {
-            margin-right: 5px;
-        }
+    .generate-button {
+        width: 400px;
+        height: 71px;
+        font-size: 23px;
+        font-weight: 500;
     }
 }

@@ -13,22 +13,31 @@ export default function Header() {
     <div className="container">
       <header>
         <div className="logo">
-          <Image src="/logo.png" alt="logo" width={100} height={100} style={{ maxWidth: '100%', height: 'auto' }} priority />
-          <span>
-            <h1>
-              <div className='logo_first_title'>MUSCLE</div>
-              <div>PASSWORD</div>
-            </h1>
-          </span>
+          <Image
+            src="/logo.png"
+            alt="Muscle Password Logo"
+            width={100}
+            height={100}
+            style={{ maxWidth: '100%', height: 'auto' }}
+            priority
+          />
+          <h1>
+            <div className="logo-first">MUSCLE</div>
+            <div className="logo-second">PASSWORD</div>
+          </h1>
         </div>
-        <span>
+        <nav>
           <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
-            <Button shape='round' size='large' icon={<FontAwesomeIcon icon={faChrome} />}>
+            <Button
+              shape="round"
+              size="large"
+              icon={<FontAwesomeIcon icon={faChrome} />}
+            >
               {t("Add to Chrome")}
             </Button>
           </Link>
           <SelectLang />
-        </span>
+        </nav>
       </header>
     </div>
   );
