@@ -2,8 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Button, Input, Switch, Slider, Tooltip } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faCopy, faRotate } from '@fortawesome/free-solid-svg-icons';
+import { CheckOutlined, CopyOutlined, SyncOutlined } from '@ant-design/icons';
 
 export default function GeneratePassword() {
     const [password, setPassword] = useState("");
@@ -111,11 +110,11 @@ export default function GeneratePassword() {
 
         // Gücü belirleme
         if (score <= 1) {
-            setStrength(<div className='strength'><Image src="/images/weak.png" alt="weak password" width={24} height={24} />{t('Weak password')}</div>);
+            setStrength(<div className='strength'><Image src="/images/weak.png" alt="weak password" width={24} height={24} />{t("Weak password")}</div>);
         } else if (score === 2) {
-            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />Fairly strong password</div>);
+            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />{t("Fairly strong password")}</div>);
         } else if (score >= 3) {
-            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />Strong password</div>);
+            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />{t("Strong password")}</div>);
         }
     }
 
@@ -136,12 +135,13 @@ export default function GeneratePassword() {
                 <Input type="text" variant="borderless" value={password} />
                 <Tooltip title="Copy">
                     <Button className="copy-button" type="link" onClick={() => copyClipboard()}>
-                        {copied ? <FontAwesomeIcon icon={faCheckCircle} /> : <FontAwesomeIcon icon={faCopy} />}
+                        {copied ? <CheckOutlined /> : <CopyOutlined />}
                     </Button>
                 </Tooltip>
                 <Button className="sync-button" type="primary" onClick={() => generatePassword()}>
-                    <FontAwesomeIcon icon={faRotate} />
+                    <SyncOutlined />
                 </Button>
+                <div className='input-bg'></div>
             </div>
             <div className="char-checkbox">
                 {checkBoxList.map((item, key) => (
@@ -159,7 +159,7 @@ export default function GeneratePassword() {
                 ))}
             </div>
             <Button type="primary" className="generate-button" onClick={() => generatePassword()}>
-                Generate Password
+                {t("Generate Password")}
             </Button>
         </section>
     );

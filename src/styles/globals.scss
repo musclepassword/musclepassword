@@ -73,7 +73,7 @@ header {
 
     article {
         text-align: center;
-        margin-right: 46px;
+        margin-bottom: 46px;
     }
 }
 
@@ -137,12 +137,30 @@ header {
         }
     }
 
+    .input-bg {
+        position: absolute;
+        background-image: url("/images/input-bg.png");
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 719px;
+        height: 275.5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top right;
+    }
+
     .char-checkbox {
         display: flex;
         justify-content: center;
+        margin-bottom: 21px;
 
-        div {
-            margin-bottom: 17px;
+        span{
+            margin-right: 7px;
+        }
+
+        div{
+            width: 100%;
         }
 
         div:not(:last-child) {

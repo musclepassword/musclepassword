@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { Button } from 'antd';
 import SelectLang from '../SelectLang';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChrome } from '@fortawesome/free-brands-svg-icons';
+import { ChromeFilled } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
@@ -31,7 +30,7 @@ export default function Header() {
             <Button
               shape="round"
               size="large"
-              icon={<FontAwesomeIcon icon={faChrome} />}
+              icon={<ChromeFilled />}
             >
               {t("Add to Chrome")}
             </Button>
