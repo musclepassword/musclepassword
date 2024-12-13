@@ -160,7 +160,7 @@ header {
         span {
             margin-right: 7px;
         }
-        
+
         div:not(:last-child) {
             margin-right: 214px;
         }
@@ -172,4 +172,13 @@ header {
         font-size: 23px;
         font-weight: 500;
     }
+}
+
+.about-section {
+    position: relative;
+    width: 1439px;
+    height: 781px;
+    margin: 38px 0 521px 1px;
+    padding: 99px 104px 100px 115px;
+    background-color: #f2f9ff;
 }

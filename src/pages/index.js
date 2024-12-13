@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 // import styles from "@/styles/Home.module.css";
 import HeaderComponent from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
+import { ConfigProvider } from 'antd';
+import AboutSection from "@/components/About";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,8 +30,25 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       > */}
       {/* <main className={styles.main}> */}
-      <HeaderComponent />
-      <HomeSection />
+      <ConfigProvider
+        theme={{
+          // algorithm: [darkAlgorithm, defaultAlgorithm],
+          token: {
+            colorPrimary: '#53baf9',
+            // borderRadius: 7,
+          },
+          components: {
+            // Button: {
+            //     colorPrimary: 'red',
+            //     algorithm: true,
+            // },                   
+          },
+        }}
+      >
+        <HeaderComponent />
+        <HomeSection />
+        {/* <AboutSection /> */}
+      </ConfigProvider>
     </>
   );
 }
