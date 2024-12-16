@@ -110,17 +110,25 @@ export default function GeneratePassword() {
 
         // Gücü belirleme
         if (score <= 1) {
-            setStrength(<div className='strength'><Image src="/images/weak.png" alt="weak password" width={24} height={24} />{t("Weak password")}</div>);
+            setStrength("Weak password");
         } else if (score === 2) {
-            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />{t("Fairly strong password")}</div>);
+            setStrength("Fairly strong password");
         } else if (score >= 3) {
-            setStrength(<div className='strength'><Image src="/images/strong.png" alt="strong password" width={24} height={24} />{t("Strong password")}</div>);
+            setStrength("Strong password");
         }
     }
 
     return (
         <section className="generate-password">
-            {strength}
+            <div className='strength'>
+                <Image
+                    src={strength == "Weak password" ? "/images/weak.png" : "/images/strong.png"}
+                    alt={strength}
+                    width={24}
+                    height={24}
+                />
+                {t(strength)}
+            </div>
             <p className='length'>{t("Password Length")}: <b>{length}</b></p>
             <div className="input-range">
                 <Slider
@@ -133,7 +141,7 @@ export default function GeneratePassword() {
             </div>
             <div className="input-password">
                 <Input type="text" variant="borderless" value={password} />
-                <Tooltip title="Copy">
+                <Tooltip title={t('Copy')}>
                     <Button className="copy-button" type="link" onClick={() => copyClipboard()}>
                         {copied ? <CheckOutlined /> : <CopyOutlined />}
                     </Button>
@@ -146,7 +154,7 @@ export default function GeneratePassword() {
             <div className="char-checkbox">
                 {checkBoxList.map((item, key) => (
                     <div>
-                        <span>{item.name + ' (' + item.value + ')'}</span>
+                        <span>{t(item.name) + ' (' + item.value + ')'}</span>
                         <Switch
                             key={key}
                             defaultValue={item.default}
