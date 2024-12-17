@@ -1,0 +1,42 @@
+[
+    {
+      "title": "Muscle Password nedir?",
+      "description": "Muscle Password, güvenliğiniz için güçlü, rastgele şifreler oluşturmanızı sağlayan bir şifre oluşturucudur. Her türlü çevrimiçi hesap için güvenli ve zor tahmin edilebilen şifreler üretir."
+    },
+    {
+      "title": "Güçlü bir şifre nedir?",
+      "description": "Güçlü bir şifre, en az 12 karakter uzunluğunda, harfler (büyük/küçük), rakamlar ve özel karakterlerin bir karışımını içeren şifredir. Bu tür şifreler tahmin edilmesi zor olduğu için güvenlidir."
+    },
+    {
+      "title": "Muscle Password kullanmak güvenli midir?",
+      "description": "Evet, Muscle Password rastgele şifreler oluşturur ve bu şifreler hiçbir yerde saklanmaz. Şifrenizi oluşturduktan sonra doğrudan size sunulur."
+    },
+    {
+      "title": "Oluşturduğum şifreyi kaydediyor musunuz?",
+      "description": "Hayır, Muscle Password herhangi bir şifreyi kaydetmez veya saklamaz. Tüm işlemler cihazınızda gerçekleşir."
+    },
+    {
+      "title": "Muscle Password şifrelerimi otomatik olarak güncelleyebilir mi?",
+      "description": "Hayır, Muscle Password yalnızca şifre oluşturur. Mevcut hesaplarınızdaki şifreleri güncellemek için ilgili hesabın şifre değişikliği ayarlarını kullanmalısınız."
+    },
+    {
+      "title": "Hangi tür şifreler oluşturabilirim?",
+      "description": "Büyük ve küçük harfler, rakamlar ve özel karakterler içeren şifreler oluşturabilirsiniz. Uzunluk ve içerik seçeneklerini ihtiyacınıza göre belirleyebilirsiniz."
+    },
+    {
+      "title": "Güçlü şifreyi nasıl saklamalıyım?",
+      "description": "Güçlü şifrelerinizi saklamak için güvenli bir şifre yöneticisi kullanabilirsiniz. Böylece tüm şifrelerinizi güvenle bir arada bulundurabilirsiniz."
+    },
+    {
+      "title": "Muscle Password ücretli mi?",
+      "description": "Hayır, Muscle Password'ü ücretsiz olarak kullanabilirsiniz. Şifre güvenliğiniz için en kaliteli araçları sunmayı hedefliyoruz."
+    },
+    {
+      "title": "Şifremi ne sıklıkla değiştirmeliyim?",
+      "description": "Önerilen en iyi uygulamalardan biri şifrelerinizi düzenli olarak, özellikle hassas bilgiler içeren hesaplar için 3-6 ayda bir değiştirmektir."
+    },
+    {
+      "title": "Muscle Password neden kullanışlı?",
+      "description": "Çevrimiçi güvenliğinizi artırmak için güçlü ve rastgele şifreler oluşturmak gereklidir. Muscle Password ile saniyeler içinde güvenli ve tahmin edilmesi zor şifreler oluşturabilirsiniz."
+    }
+  ]

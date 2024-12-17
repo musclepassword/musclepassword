@@ -161,7 +161,7 @@ header {
     .char-checkbox {
         display: flex;
         justify-content: center;
-        margin-bottom: 21px;
+        margin-bottom: 51px;
 
         span {
             margin-right: 7px;
@@ -184,8 +184,30 @@ header {
     position: relative;
     width: 100%;
     height: 781px;
-    margin: 38px 0 521px 1px;
-    padding: 99px 104px 100px 115px;
+    padding: 100px 0;
     background-color: #f2f9ff;
     text-align: center;
+
+    .circle-left {
+        position: absolute;
+        left: 13px;
+        top: 120px;
+    }
+
+    .circle-right {
+        position: absolute;
+        right: 9px;
+        bottom: 30px;
+    }
+}
+
+.faq-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f9fcff;
+
+    article {
+        text-align: center;
+    }
 }

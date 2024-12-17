@@ -5,6 +5,7 @@ import HeaderComponent from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import { ConfigProvider } from 'antd';
 import AboutSection from "@/components/About";
+import FAQSection from "@/components/FAQ";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,6 +49,7 @@ export default function Home() {
         <HeaderComponent />
         <HomeSection />
         <AboutSection />
+        <FAQSection />
       </ConfigProvider>
     </>
   );
