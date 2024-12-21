@@ -59,7 +59,7 @@ export default function AboutSection() {
                                 width={105}
                                 height={56}
                             />
-                            <h4>{t("Complex")}</h4>
+                            <h4 style={{ color: "#fff" }}>{t("Complex")}</h4>
                             <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
                         </Card>
                     </Col>
