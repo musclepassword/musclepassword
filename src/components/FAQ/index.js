@@ -3,19 +3,18 @@ import { useTranslation } from 'react-i18next';
 import FAQ from "../../static/faq.json";
 
 export default function FAQSection() {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('faq');
 
     const items = FAQ.map((item, i) => (
         {
             key: i,
-            label: item.title
-            ,
-            children: <p>{item.description}</p>
+            label: t(item.title),
+            children: (<p>{t(item.description)}</p>)
         }
     ));
 
     return (
-        <section className='faq-section'>
+        <section className="faq-section">
             <div className="container">
                 <article>
                     <h2>{t("Password Generator FAQs")}</h2>

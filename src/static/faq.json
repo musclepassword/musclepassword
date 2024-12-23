@@ -1,42 +1,42 @@
 [
-    {
-      "title": "Muscle Password nedir?",
-      "description": "Muscle Password, güvenliğiniz için güçlü, rastgele şifreler oluşturmanızı sağlayan bir şifre oluşturucudur. Her türlü çevrimiçi hesap için güvenli ve zor tahmin edilebilen şifreler üretir."
-    },
-    {
-      "title": "Güçlü bir şifre nedir?",
-      "description": "Güçlü bir şifre, en az 12 karakter uzunluğunda, harfler (büyük/küçük), rakamlar ve özel karakterlerin bir karışımını içeren şifredir. Bu tür şifreler tahmin edilmesi zor olduğu için güvenlidir."
-    },
-    {
-      "title": "Muscle Password kullanmak güvenli midir?",
-      "description": "Evet, Muscle Password rastgele şifreler oluşturur ve bu şifreler hiçbir yerde saklanmaz. Şifrenizi oluşturduktan sonra doğrudan size sunulur."
-    },
-    {
-      "title": "Oluşturduğum şifreyi kaydediyor musunuz?",
-      "description": "Hayır, Muscle Password herhangi bir şifreyi kaydetmez veya saklamaz. Tüm işlemler cihazınızda gerçekleşir."
-    },
-    {
-      "title": "Muscle Password şifrelerimi otomatik olarak güncelleyebilir mi?",
-      "description": "Hayır, Muscle Password yalnızca şifre oluşturur. Mevcut hesaplarınızdaki şifreleri güncellemek için ilgili hesabın şifre değişikliği ayarlarını kullanmalısınız."
-    },
-    {
-      "title": "Hangi tür şifreler oluşturabilirim?",
-      "description": "Büyük ve küçük harfler, rakamlar ve özel karakterler içeren şifreler oluşturabilirsiniz. Uzunluk ve içerik seçeneklerini ihtiyacınıza göre belirleyebilirsiniz."
-    },
-    {
-      "title": "Güçlü şifreyi nasıl saklamalıyım?",
-      "description": "Güçlü şifrelerinizi saklamak için güvenli bir şifre yöneticisi kullanabilirsiniz. Böylece tüm şifrelerinizi güvenle bir arada bulundurabilirsiniz."
-    },
-    {
-      "title": "Muscle Password ücretli mi?",
-      "description": "Hayır, Muscle Password'ü ücretsiz olarak kullanabilirsiniz. Şifre güvenliğiniz için en kaliteli araçları sunmayı hedefliyoruz."
-    },
-    {
-      "title": "Şifremi ne sıklıkla değiştirmeliyim?",
-      "description": "Önerilen en iyi uygulamalardan biri şifrelerinizi düzenli olarak, özellikle hassas bilgiler içeren hesaplar için 3-6 ayda bir değiştirmektir."
-    },
-    {
-      "title": "Muscle Password neden kullanışlı?",
-      "description": "Çevrimiçi güvenliğinizi artırmak için güçlü ve rastgele şifreler oluşturmak gereklidir. Muscle Password ile saniyeler içinde güvenli ve tahmin edilmesi zor şifreler oluşturabilirsiniz."
-    }
-  ]
+  {
+    "title": "What is Muscle Password?",
+    "description": "Muscle Password is a password generator that helps you create strong, random passwords for your security. It generates secure and hard-to-guess passwords for any online account."
+  },
+  {
+    "title": "What is a strong password?",
+    "description": "A strong password is at least 12 characters long and includes a mix of letters (uppercase/lowercase), numbers, and special characters. Such passwords are secure because they are difficult to guess."
+  },
+  {
+    "title": "Is it safe to use Muscle Password?",
+    "description": "Yes, Muscle Password generates random passwords and does not store them anywhere. Once generated, your password is provided directly to you."
+  },
+  {
+    "title": "Do you save the password I generate?",
+    "description": "No, Muscle Password does not save or store any passwords. All operations happen on your device."
+  },
+  {
+    "title": "Can Muscle Password automatically update my passwords?",
+    "description": "No, Muscle Password only generates passwords. To update passwords for your existing accounts, you need to use the password change settings of the respective account."
+  },
+  {
+    "title": "What types of passwords can I create?",
+    "description": "You can create passwords that include uppercase and lowercase letters, numbers, and special characters. You can customize the length and composition based on your needs."
+  },
+  {
+    "title": "How should I store a strong password?",
+    "description": "To store strong passwords, you can use a secure password manager. This way, you can keep all your passwords safely in one place."
+  },
+  {
+    "title": "Is Muscle Password free?",
+    "description": "No, Muscle Password is free to use. We aim to provide the best tools for your password security."
+  },
+  {
+    "title": "How often should I change my password?",
+    "description": "A recommended best practice is to change your passwords regularly, especially for accounts containing sensitive information, every 3-6 months."
+  },
+  {
+    "title": "Why is Muscle Password useful?",
+    "description": "To enhance your online security, it is essential to create strong and random passwords. With Muscle Password, you can generate secure and hard-to-guess passwords in seconds."
+  }
+]
