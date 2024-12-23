@@ -6,7 +6,7 @@ export default function AboutSection() {
     const { t } = useTranslation('about');
 
     return (
-        <section className='about-section'>
+        <section className="about-section">
             <div className="container">
                 <article>
                     <h2>{t("What makes a password strong?")}</h2>
