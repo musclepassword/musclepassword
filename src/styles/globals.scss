@@ -187,17 +187,20 @@ header {
     padding: 100px 0;
     background-color: #f2f9ff;
     text-align: center;
+    z-index: 0;
 
     .circle-left {
         position: absolute;
-        left: 13px;
-        top: 120px;
+        left: -20px;
+        top: -25px;
+        z-index: -1;
     }
 
     .circle-right {
         position: absolute;
-        right: 9px;
-        bottom: 30px;
+        right: -21px;
+        bottom: -20px;
+        z-index: -1;
     }
 }
 

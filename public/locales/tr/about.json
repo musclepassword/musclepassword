@@ -2,5 +2,8 @@
     "What makes a password strong?": "Bir şifreyi güçlü kılan nedir?",
     "Long": "Uzun",
     "Complex": "Karmaşık",
-    "Unique": "Eşsiz"
+    "Unique": "Eşsiz",
+    "The longer a password, the more secure it is. A strong password should be at least 10 characters long.": "Bir şifre ne kadar uzunsa o kadar güvenlidir. Güçlü bir şifre en az 10 karakter uzunluğunda olmalıdır.",
+    "Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.": "Güçlü parolalar, kelimelere veya isimlere benzemeyen, tahmin edilemeyen bir karakter dizisi oluşturmak için harf, sayı, harf ve sembollerin bir kombinasyonunu kullanır.",
+    "A strong password should be unique to each account to reduce vulnerability in the event of a hack.": "Her hesap için benzersiz ve güçlü bir parola belirlenmeli, böylece olası bir saldırı durumunda güvenlik açığı azaltılmış olur."
 }

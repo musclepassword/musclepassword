@@ -13,15 +13,9 @@ export default function AboutSection() {
                 </article>
                 <Row>
                     <Col md={8} sm={24}>
-                        <Image
-                            src={"/images/about/about-circle.png"}
-                            alt={"about-circle"}
-                            className='circle-left'
-                            width={56}
-                            height={46}
-                        />
                         <Card
                             style={{
+                                position: "relative",
                                 width: 354,
                                 height: 422,
                                 borderRadius: "15px",
@@ -31,13 +25,20 @@ export default function AboutSection() {
                             }}
                         >
                             <Image
+                                src={"/images/about/about-circle.png"}
+                                alt={"about-circle"}
+                                className='circle-left'
+                                width={56}
+                                height={46}
+                            />
+                            <Image
                                 src={"/images/about/long.svg"}
                                 alt={"long"}
                                 width={105}
                                 height={56}
                             />
                             <h4>{t("Long")}</h4>
-                            <p>The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
+                            <p>{t("The longer a password, the more secure it is. A strong password should be at least 10 characters long.")}</p>
                         </Card>
                     </Col>
                     <Col md={8} sm={24}>
@@ -60,19 +61,13 @@ export default function AboutSection() {
                                 height={56}
                             />
                             <h4 style={{ color: "#fff" }}>{t("Complex")}</h4>
-                            <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
+                            <p>{t("Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.")}</p>
                         </Card>
                     </Col>
                     <Col md={8} sm={24}>
-                        <Image
-                            src={"/images/about/about-circle.png"}
-                            alt={"about-circle"}
-                            className='circle-right'
-                            width={56}
-                            height={46}
-                        />
                         <Card
                             style={{
+                                position: "relative",
                                 width: 354,
                                 height: 422,
                                 borderRadius: "15px",
@@ -82,13 +77,20 @@ export default function AboutSection() {
                             }}
                         >
                             <Image
+                                src={"/images/about/about-circle.png"}
+                                alt={"about-circle"}
+                                className='circle-right'
+                                width={56}
+                                height={46}
+                            />
+                            <Image
                                 src={"/images/about/finger.svg"}
                                 alt={"long"}
                                 width={105}
                                 height={56}
                             />
                             <h4>{t("Unique")}</h4>
-                            <p>A strong password should be unique to each account to reduce vulnerability in the event of a hack.</p>
+                            <p>{t("A strong password should be unique to each account to reduce vulnerability in the event of a hack.")}</p>
                         </Card>
                     </Col>
                 </Row>
