@@ -153,7 +153,7 @@ export default function GeneratePassword() {
             </div>
             <div className="char-checkbox">
                 {checkBoxList.map((item, key) => (
-                    <div>
+                    <div key={key}>
                         <span>{t(item.name) + ' (' + item.value + ')'}</span>
                         <Switch
                             key={key}

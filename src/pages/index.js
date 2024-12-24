@@ -6,6 +6,9 @@ import HomeSection from "@/components/HomeSection";
 import { ConfigProvider } from 'antd';
 import AboutSection from "@/components/About";
 import FAQSection from "@/components/FAQ";
+import ChromeExtenstionSection from "@/components/ChromeExtenstion";
+import ContactSection from "@/components/Contact";
+import FooterComponent from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,6 +53,9 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <FAQSection />
+        <ChromeExtenstionSection />
+        <ContactSection />
+        <FooterComponent />
       </ConfigProvider>
     </>
   );

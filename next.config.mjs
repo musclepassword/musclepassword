@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  output: "export", // Statik export için gerekli
+  basePath: "/musclepassword", // Repo adınızı buraya yazın
+  images: {
+    unoptimized: true, // Statik export'ta image optimization devre dışı
+  },
   reactStrictMode: true,
   transpilePackages: [
     // antd & deps
