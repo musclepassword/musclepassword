@@ -23,13 +23,31 @@ h2 {
 
 h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 500 !important;
     color: #939393;
 }
 
 h4 {
     font-size: 27px;
-    font-weight: bold;
+    font-weight: bold !important;
+    color: #000;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: normal !important;
+    color: #000;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold !important;
+    color: #939393;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: bold !important;
     color: #000;
 }
 
@@ -49,7 +67,7 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 53px 0px;
+    padding: 53px 0;
     font-size: 20px;
     z-index: 2;
 
@@ -209,8 +227,117 @@ header {
     width: 100%;
     padding: 100px 0;
     background-color: #f9fcff;
+    margin-bottom: 41px;
 
     article {
         text-align: center;
+    }
+}
+
+.chrome-ext-section {
+    width: 100%;
+    height: 641px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 41px;
+
+    figure {
+        position: relative;
+    }
+
+    h4{
+        color: #939393;
+        padding-bottom: 27px;
+    }
+
+    p {
+        padding-bottom: 15px;
+        font-size: 18px;
+        color: #939393;
+    }
+
+    .chrome-ext-logo {
+        position: absolute;
+        bottom: -70px;
+        left: -80px;
+    }
+}
+
+.black-button {
+    cursor: pointer;
+    width: 380px;
+    height: 61px;
+    padding: 17px 77px;
+    border-radius: 9px;
+    border: solid 1px #3e4347;
+    background-color: #1c2227;
+    color: #fff;
+
+    &:hover {
+        background-color: #333639 !important;
+        color: #fff !important;
+    }
+}
+
+.contact-section {
+    width: 100%;
+    height: 397px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #101418, #161a1e);
+    overflow: hidden;
+
+    article {
+        margin-bottom: 55px;
+    }
+
+    h4 {
+        color: #fff;
+    }
+
+    .circle {
+        position: absolute;
+        right: -60%;
+        bottom: -40%;
+    }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 313px;
+    border-top: solid 2px #53baf9;
+    background-color: #f2f9ff;
+
+    .logo {
+        margin: 17px 0;
+    }
+
+    .text {
+        margin-bottom: 67px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    svg {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    svg:not(last-child) {
+        margin-right: 16px;
+    }
+
+    .copyright {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
     }
 }
