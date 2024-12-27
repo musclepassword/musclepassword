@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
-import GeneratePassword from "../generatepassword";
+import { useTranslation } from 'next-i18next';
+import GeneratePassword from '../generatepassword';
 
 export default function HomeSection() {
   const { t } = useTranslation("common");

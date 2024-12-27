@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from 'antd';
 import SelectLang from '../SelectLang';
 import { ChromeFilled } from '@ant-design/icons';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 export default function Header() {
   const { t } = useTranslation('common');

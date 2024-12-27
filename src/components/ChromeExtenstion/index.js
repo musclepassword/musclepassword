@@ -1,5 +1,5 @@
 import { Row, Col, Button } from 'antd';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChromeFilled } from '@ant-design/icons';
@@ -34,8 +34,10 @@ export default function ChromeExtenstionSection() {
                             <h4>{t("Discover Chrome extensions !")}</h4>
                             <h5>{t("Strong Password Generation:")}</h5>
                             <p>{t("Generates strong and random passwords.")}</p>
+
                             <h5>{t("Easy-to-Use Interface:")}</h5>
                             <p>{t("Generate passwords with one click.")}</p>
+                            
                             <h5>{t("Customization Options:")}</h5>
                             <p>{t("Set password length and character types according to your needs.")}</p>
                         </article>

@@ -1,6 +1,6 @@
 import { Collapse } from 'antd';
-import { useTranslation } from 'react-i18next';
-import FAQ from "../../static/faq.json";
+import { useTranslation } from 'next-i18next';
+import FAQ from "../../staticData/faq.json";
 import { PlusOutlined } from '@ant-design/icons';
 
 export default function FAQSection() {

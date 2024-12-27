@@ -1,24 +1,25 @@
 import { Dropdown, Button } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import { useState, useEffect } from 'react';
-import i18n from '../../i18n';
+import { useRouter } from 'next/router';
 
 export default function SelectLang() {
     const [lang, setLang] = useState(null);
+    const router = useRouter();
 
     useEffect(() => {
         if (typeof window !== "undefined" && localStorage) {
             const storedLang = localStorage.getItem("i18nextLng") || "en";
             setLang(storedLang);
-            i18n.changeLanguage(storedLang);
+            router.push(router.pathname, router.asPath, { storedLang });
         }
     }, []);
 
-    const changeLanguage = (newLocale) => {
-        localStorage.setItem('i18nextLng', newLocale);
-        setLang(newLocale);
-        i18n.changeLanguage(newLocale);
-    };
+    const changeLanguage = (locale) => {
+        localStorage.setItem('i18nextLng', locale);
+        router.push(router.pathname, router.asPath, { locale });
+        setLang(locale);
+    }
 
     const languageLabels = [
         { key: 'tr', value: 'Türkçe' },

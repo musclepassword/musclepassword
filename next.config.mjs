@@ -1,12 +1,19 @@
 /** @type {import('next').NextConfig} */
+import nextI18nextConfig from './next-i18next.config.js';
 
 const nextConfig = {
-  output: "export", // Statik export için gerekli
-  assetPrefix: "./",
-  images: {
-    unoptimized: true, // Statik export'ta image optimization devre dışı
-  },
   reactStrictMode: true,
+  eslint: {
+    // Disabling on production builds because we're running checks on PRs via GitHub Actions.
+    ignoreDuringBuilds: true,
+  },
+  trailingSlash: false,
+  i18n: nextI18nextConfig.i18n,
+  // output: "export", // Statik export için gerekli
+  // assetPrefix: "./",
+  // images: {
+  //   unoptimized: true, // Statik export'ta image optimization devre dışı
+  // },
   transpilePackages: [
     // antd & deps
     "@ant-design",
@@ -44,7 +51,6 @@ const nextConfig = {
     "rc-tree-select",
     "rc-upload",
     "rc-util",
-    "react-i18next",
   ],
 };
 
