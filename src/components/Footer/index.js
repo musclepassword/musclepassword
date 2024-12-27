@@ -5,7 +5,7 @@ import { GithubOutlined, MailOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('footer');
 
   return (
     <footer>
@@ -21,8 +21,8 @@ export default function Footer() {
         />
         <h6>Muscle Password</h6>
         <p className='text'>
-          Strong and random password generator.<br />
-          Create strong passwords to ensure your security.
+          {t("Strong and random password generator")}<br />
+          {t("Create strong passwords to ensure your security")}
         </p>
         <Link href="https://github.com/musclepassword" target='_blank'>
           <GithubOutlined />
@@ -32,10 +32,10 @@ export default function Footer() {
         </Link>
         <div className='copyright'>
           <div>
-            Copyright © 2024
+          {t("Copyright")} © 2024
           </div>
           <div>
-            Design & Development by
+            {t("Design & Development by")}
             <Link href="https://cuneydbolukoglu.com" target='_blank'>
               <Button style={{ marginLeft: "-10px"}} type="link">Cüneyd BÖLÜKOĞLU</Button>
             </Link>
