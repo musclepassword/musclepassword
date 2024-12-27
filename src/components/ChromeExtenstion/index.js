@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ChromeFilled } from '@ant-design/icons';
 
 export default function ChromeExtenstionSection() {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation(['chrome', 'common']);
 
     return (
         <section className="chrome-ext-section">
@@ -29,16 +29,15 @@ export default function ChromeExtenstionSection() {
                         </figure>
                     </Col>
                     <Col md={12} sm={24}>
-
                         <article>
                             <h2>{t("Chrome Extension")}</h2>
-                            <h4>Discover Chrome extensions !</h4>
-                            <h5>Strong Password Generation:</h5>
-                            <p>Generates strong and random passwords.</p>
-                            <h5>Easy-to-Use Interface:</h5>
-                            <p>Generate passwords with one click.</p>
-                            <h5>Customization Options:</h5>
-                            <p>Set password length and character types according to your needs.</p>
+                            <h4>{t("Discover Chrome extensions !")}</h4>
+                            <h5>{t("Strong Password Generation:")}</h5>
+                            <p>{t("Generates strong and random passwords.")}</p>
+                            <h5>{t("Easy-to-Use Interface:")}</h5>
+                            <p>{t("Generate passwords with one click.")}</p>
+                            <h5>{t("Customization Options:")}</h5>
+                            <p>{t("Set password length and character types according to your needs.")}</p>
                         </article>
                         <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
                             <Button
@@ -47,7 +46,7 @@ export default function ChromeExtenstionSection() {
                                 type="link"
                                 icon={<ChromeFilled />}
                             >
-                                {t("Add to Chrome")}
+                                {t("Add to Chrome", { ns: 'common' })}
                             </Button>
                         </Link>
                     </Col>
