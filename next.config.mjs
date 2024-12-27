@@ -9,11 +9,6 @@ const nextConfig = {
   },
   trailingSlash: false,
   i18n: nextI18nextConfig.i18n,
-  // output: "export", // Statik export için gerekli
-  // assetPrefix: "./",
-  // images: {
-  //   unoptimized: true, // Statik export'ta image optimization devre dışı
-  // },
   transpilePackages: [
     // antd & deps
     "@ant-design",
