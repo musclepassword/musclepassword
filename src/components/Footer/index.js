@@ -21,8 +21,8 @@ export default function Footer() {
         />
         <h6>Muscle Password</h6>
         <p className='text'>
-          {t("Strong and random password generator")}<br />
-          {t("Create strong passwords to ensure your security")}
+          {t("Strong and random password generator.")}<br />
+          {t("Create strong passwords to ensure your security.")}
         </p>
         <Link href="https://github.com/musclepassword" target='_blank'>
           <GithubOutlined />
