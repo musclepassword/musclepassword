@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const getStaticProps = async ({ locale }) => {
+  console.log(locale);
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
