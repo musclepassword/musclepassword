@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { GithubOutlined } from '@ant-design/icons';
 
 export default function ContactSection() {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('contact');
 
     return (
         <section className="contact-section">
