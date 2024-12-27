@@ -2,7 +2,6 @@
 
 const nextConfig = {
   output: "export", // Statik export için gerekli
-  // basePath: "/musclepassword", // Repo adınızı buraya yazın
   assetPrefix: "./",
   images: {
     unoptimized: true, // Statik export'ta image optimization devre dışı
