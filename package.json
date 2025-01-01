@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy-": "npm run build",
-    "deploy": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/"
+    "deploy": "npm run build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
