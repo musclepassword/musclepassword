@@ -1,4 +1,4 @@
-import { Row, Col, Button } from 'antd';
+import { Row, Col, Button, Timeline } from 'antd';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -32,14 +32,34 @@ export default function ChromeExtenstionSection() {
                         <article>
                             <h2>{t("Chrome Extension")}</h2>
                             <h4>{t("Discover Chrome extensions !")}</h4>
-                            <h5>{t("Strong Password Generation:")}</h5>
-                            <p>{t("Generates strong and random passwords.")}</p>
-
-                            <h5>{t("Easy-to-Use Interface:")}</h5>
-                            <p>{t("Generate passwords with one click.")}</p>
-                            
-                            <h5>{t("Customization Options:")}</h5>
-                            <p>{t("Set password length and character types according to your needs.")}</p>
+                            <Timeline
+                                items={[
+                                    {
+                                        children: (
+                                            <>
+                                                <h5>{t("Strong Password Generation:")}</h5>
+                                                <p>{t("Generates strong and random passwords.")}</p>
+                                            </>
+                                        ),
+                                    },
+                                    {
+                                        children: (
+                                            <>
+                                                <h5>{t("Easy-to-Use Interface:")}</h5>
+                                                <p>{t("Generate passwords with one click.")}</p>
+                                            </>
+                                        ),
+                                    },
+                                    {
+                                        children: (
+                                            <>
+                                                <h5>{t("Customization Options:")}</h5>
+                                                <p>{t("Set password length and character types according to your needs.")}</p>
+                                            </>
+                                        ),
+                                    },
+                                ]}
+                            />
                         </article>
                         <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
                             <Button
