@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import nextI18nextConfig from './next-i18next.config.js';
 
 const nextConfig = {
   reactStrictMode: true,
@@ -8,7 +7,11 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: false,
-  i18n: nextI18nextConfig.i18n,
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'tr'],
+    localeDetection: false,
+  },
   transpilePackages: [
     // antd & deps
     "@ant-design",

@@ -6,5 +6,4 @@ module.exports = {
   },
   fallbackLng: 'en',
   ns: ['common'],
-  reloadOnPrerender: process.env.NODE_ENV === 'development',
 };
