@@ -7,11 +7,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: false,
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'tr'],
-    localeDetection: false,
-  },
+
   transpilePackages: [
     // antd & deps
     "@ant-design",
