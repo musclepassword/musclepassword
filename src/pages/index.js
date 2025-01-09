@@ -8,6 +8,7 @@ import ChromeExtenstionSection from "@/components/ChromeExtenstion";
 import ContactSection from "@/components/Contact";
 import FooterComponent from "@/components/Footer";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import theme from "@/theme";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -26,21 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: "#53baf9",
-            colorLink: "#53baf9",
-            // borderRadius: 7,
-          },
-          components: {
-            // Button: {
-            //     colorPrimary: 'red',
-            //     algorithm: true,
-            // },
-          },
-        }}
-      >
+      <ConfigProvider theme={theme}>
         <HeaderComponent />
         <HomeSection />
         <AboutSection />
