@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
   reactStrictMode: true,
@@ -7,11 +8,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: false,
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'tr'],
-    localeDetection: false,
-  },
+  output: 'export',
+  i18n,
+  rewrites: async () => i18nStatic(),
   transpilePackages: [
     // antd & deps
     "@ant-design",
