@@ -7,7 +7,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en', // Varsayılan dil
-    debug: true,       // Hata ayıklama açık
+    debug: false,       // Hata ayıklama açık
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json', // Dil dosyası yolu
     },

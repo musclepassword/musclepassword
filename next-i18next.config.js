@@ -1,9 +1,11 @@
+const path = require('path');
+
 module.exports = {
   i18n: {
-      defaultLocale: 'en',
-      locales: ['en', 'tr'],
-      localeDetection: false,
+    locales: ['en', 'tr'], // Desteklenen diller
+    defaultLocale: 'en', // Varsayılan dil
+    localePath: path.resolve('./public/locales'), // Dil dosyalarının yolu
+    localeDetection: false, // Otomatik dil algılama devre dışı
+    debug: true,
   },
-  fallbackLng: 'en',
-  ns: ['common'],
 };

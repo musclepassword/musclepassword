@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Button, Input, Switch, Slider, Tooltip } from 'antd';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { CheckOutlined, CopyOutlined, SyncOutlined } from '@ant-design/icons';
 
 export default function GeneratePassword() {

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'antd';
 import { GithubOutlined, MailOutlined } from '@ant-design/icons';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
   const { t } = useTranslation('footer');

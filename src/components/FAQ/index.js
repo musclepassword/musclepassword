@@ -1,5 +1,5 @@
 import { Collapse } from 'antd';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import FAQ from "../../static/faqData/faq.json";
 import { PlusOutlined } from '@ant-design/icons';
 
