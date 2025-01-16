@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
   reactStrictMode: true,
@@ -7,10 +6,11 @@ const nextConfig = {
     // Disabling on production builds because we're running checks on PRs via GitHub Actions.
     ignoreDuringBuilds: true,
   },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'tr'],
+  },
   trailingSlash: false,
-  output: 'export',
-  i18n,
-  rewrites: async () => i18nStatic(),
   transpilePackages: [
     // antd & deps
     "@ant-design",

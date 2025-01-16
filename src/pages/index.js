@@ -13,7 +13,7 @@ import theme from "@/theme";
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'about', 'chrome', 'contact', 'faq', 'footer'])),
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'about', 'chrome', 'contact', 'faq', 'footer'])),
     },
   };
 }
