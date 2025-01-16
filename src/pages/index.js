@@ -7,16 +7,7 @@ import FAQSection from "@/components/FAQ";
 import ChromeExtenstionSection from "@/components/ChromeExtenstion";
 import ContactSection from "@/components/Contact";
 import FooterComponent from "@/components/Footer";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import theme from "@/theme";
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'about', 'chrome', 'contact', 'faq', 'footer'])),
-    },
-  };
-}
 
 export default function Home() {
   return (

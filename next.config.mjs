@@ -6,10 +6,6 @@ const nextConfig = {
     // Disabling on production builds because we're running checks on PRs via GitHub Actions.
     ignoreDuringBuilds: true,
   },
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'tr'],
-  },
   trailingSlash: false,
   transpilePackages: [
     // antd & deps
@@ -48,6 +44,7 @@ const nextConfig = {
     "rc-tree-select",
     "rc-upload",
     "rc-util",
+    "react-i18next",
   ],
 };
 
