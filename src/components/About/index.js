@@ -15,13 +15,14 @@ export default function AboutSection() {
                     <Col md={8} sm={24}>
                         <Card
                             style={{
-                                position: "relative",
-                                width: 354,
                                 height: 422,
                                 borderRadius: "15px",
                                 boxShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)",
-                                margin: "64px 52px 48px 21px",
                                 padding: "44.7px 34px 75.8px 35px",
+                                margin: "40px",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex",
                             }}
                         >
                             <Image
@@ -44,14 +45,16 @@ export default function AboutSection() {
                     <Col md={8} sm={24}>
                         <Card
                             style={{
-                                width: 354,
                                 height: 482,
                                 borderRadius: "15px",
                                 boxShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)",
-                                margin: "52px 54px 0 52px",
                                 padding: "44px 40px 213px 42px",
                                 backgroundColor: "#47a4f4",
-                                color: "#fff"
+                                color: "#fff",
+                                margin: "40px",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex",
                             }}
                         >
                             <Image
@@ -67,13 +70,14 @@ export default function AboutSection() {
                     <Col md={8} sm={24}>
                         <Card
                             style={{
-                                position: "relative",
-                                width: 354,
                                 height: 422,
                                 borderRadius: "15px",
                                 boxShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)",
-                                margin: "64px 31px 54px 54px",
                                 padding: "20px 46px 168px 36px",
+                                margin: "40px",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex",
                             }}
                         >
                             <Image
