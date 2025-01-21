@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HeaderComponent from "@/components/header";
+import HeaderComponent from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import { ConfigProvider } from "antd";
 import AboutSection from "@/components/About";

@@ -5,7 +5,7 @@ import SelectLang from '../SelectLang';
 import { ChromeFilled } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
-export default function Header() {
+export default function HeaderComponent() {
   const { t } = useTranslation('common');
 
   return (
