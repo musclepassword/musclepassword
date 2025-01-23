@@ -1,4 +1,4 @@
-import { Row, Col, Button, Timeline } from 'antd';
+import { Row, Col, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,6 +6,11 @@ import { ChromeFilled } from '@ant-design/icons';
 
 export default function ChromeExtenstionSection() {
     const { t } = useTranslation(['chrome', 'common']);
+    const chromeExtensionContent = [
+        { title: t("Strong Password Generation:"), text: t("Generates strong and random passwords.") },
+        { title: t("Easy-to-Use Interface:"), text: t("Generate passwords with one click.") },
+        { title: t("Customization Options:"), text: t("Set password length and character types according to your needs.") },
+    ];
 
     return (
         <section className="chrome-ext-section">
@@ -32,34 +37,16 @@ export default function ChromeExtenstionSection() {
                         <article>
                             <h2>{t("Chrome Extension")}</h2>
                             <h4>{t("Discover Chrome extensions !")}</h4>
-                            <Timeline
-                                items={[
-                                    {
-                                        children: (
-                                            <>
-                                                <h5>{t("Strong Password Generation:")}</h5>
-                                                <p>{t("Generates strong and random passwords.")}</p>
-                                            </>
-                                        ),
-                                    },
-                                    {
-                                        children: (
-                                            <>
-                                                <h5>{t("Easy-to-Use Interface:")}</h5>
-                                                <p>{t("Generate passwords with one click.")}</p>
-                                            </>
-                                        ),
-                                    },
-                                    {
-                                        children: (
-                                            <>
-                                                <h5>{t("Customization Options:")}</h5>
-                                                <p>{t("Set password length and character types according to your needs.")}</p>
-                                            </>
-                                        ),
-                                    },
-                                ]}
-                            />
+                            {
+                                chromeExtensionContent.map((item, index) => {
+                                    return (
+                                        <>
+                                            <h5>{item.title}</h5>
+                                            <p>{item.text}</p>
+                                        </>
+                                    )
+                                })
+                            }
                         </article>
                         <Link href="https://chromewebstore.google.com/detail/muscle-password/iimjcckbcjoehbfekigjpnlgmjllmgdk" target='_blank'>
                             <Button
