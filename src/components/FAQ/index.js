@@ -22,7 +22,7 @@ export default function FAQSection() {
                     <p>{t("Questions about this random password generator? Answers below!")}</p>
                 </article>
                 <Collapse
-                    style={{ backgroundColor: 'transparent' }}
+                    style={{ backgroundColor: 'transparent', margin: '0 auto', maxWidth: 800 }}
                     bordered={false}
                     defaultActiveKey={['0']}
                     expandIcon={({ isActive }) => <PlusOutlined style={{ fontSize: 20, color: '#53baf9' }} rotate={isActive ? 45 : 0} />}
