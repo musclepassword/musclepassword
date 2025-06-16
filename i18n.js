@@ -6,13 +6,13 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en', // Varsayılan dil
-    debug: false,       // Hata ayıklama açık
+    fallbackLng: 'en',
+    debug: false,
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // Dil dosyası yolu
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['common'],      // Kullanılan namespace
-    defaultNS: 'common', // Varsayılan namespace
+    ns: ['common'],
+    defaultNS: 'common',
     interpolation: {
       escapeValue: false, // React için gerekli
     },
