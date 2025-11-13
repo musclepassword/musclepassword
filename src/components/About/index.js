@@ -25,14 +25,14 @@ export default function AboutSection() {
                             }}
                         >
                             <Image
-                                src={"/images/about/about-circle.png"}
+                                src={"/assets/images/about/about-circle.png"}
                                 alt={"about-circle"}
                                 className='circle-left'
                                 width={56}
                                 height={46}
                             />
                             <Image
-                                src={"/images/about/long.svg"}
+                                src={"/assets/images/about/long.svg"}
                                 alt={"long"}
                                 width={105}
                                 height={56}
@@ -56,7 +56,7 @@ export default function AboutSection() {
                             }}
                         >
                             <Image
-                                src={"/images/about/lock.svg"}
+                                src={"/assets/images/about/lock.svg"}
                                 alt={"long"}
                                 width={105}
                                 height={56}
@@ -78,14 +78,14 @@ export default function AboutSection() {
                             }}
                         >
                             <Image
-                                src={"/images/about/about-circle.png"}
+                                src={"/assets/images/about/about-circle.png"}
                                 alt={"about-circle"}
                                 className='circle-right'
                                 width={56}
                                 height={46}
                             />
                             <Image
-                                src={"/images/about/finger.svg"}
+                                src={"/assets/images/about/finger.svg"}
                                 alt={"long"}
                                 width={105}
                                 height={56}

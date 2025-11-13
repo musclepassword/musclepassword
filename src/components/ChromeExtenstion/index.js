@@ -19,14 +19,14 @@ export default function ChromeExtenstionSection() {
                     <Col md={12} sm={24}>
                         <figure>
                             <Image
-                                src={"/images/chrome-extenstion-app.png"}
+                                src={"/assets/images/chrome-extenstion-app.png"}
                                 alt={"chrome-extenstion-app"}
                                 width={353}
                                 height={492}
                             />
                             <Image
                                 className='chrome-ext-logo'
-                                src={"/images/chrome-extenstion-logo.png"}
+                                src={"/assets/images/chrome-extenstion-logo.png"}
                                 alt={"chrome-extenstion-logo"}
                                 width={143}
                                 height={143}

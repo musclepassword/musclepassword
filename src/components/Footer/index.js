@@ -12,14 +12,14 @@ export default function Footer() {
       <div className="container">
         <Image
           className='logo'
-          src="/logo.png"
+          src="/assets/images/logo.png"
           alt="Muscle Password Logo"
           width={70}
           height={70}
           style={{ maxWidth: '100%', height: 'auto' }}
           priority
         />
-        <h6>Muscle Password</h6>
+        <h6 style={{ fontWeight: "bold" }}>Muscle Password</h6>
         <p className='text'>
           {t("Strong and random password generator.")}<br />
           {t("Create strong passwords to ensure your security.")}
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
       </div>
       <Image
-        src="/images/footer-image.png"
+        src="/assets/images/footer-image.png"
         alt="footer-image"
         width={591}
         height={267}

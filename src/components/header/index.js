@@ -13,7 +13,7 @@ export default function HeaderComponent() {
       <header>
         <div className="logo">
           <Image
-            src="/logo.png"
+            src="/assets/images/logo.png"
             alt="Muscle Password Logo"
             width={100}
             height={100}

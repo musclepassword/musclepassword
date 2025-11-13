@@ -122,10 +122,11 @@ export default function GeneratePassword() {
         <section className="generate-password">
             <div className='strength'>
                 <Image
-                    src={strength == "Weak password" ? "/images/weak.png" : "/images/strong.png"}
+                    src={strength == "Weak password" ? "/assets/images/unprotected.png" : "/assets/images/security.png"}
                     alt={strength}
                     width={24}
                     height={24}
+                    style={{ marginRight: 10 }}
                 />
                 {t(strength)}
             </div>

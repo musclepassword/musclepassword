@@ -25,7 +25,7 @@ export default function ContactSection() {
                     </Button>
                 </Link>
                 <Image
-                    src={"/images/contact-circle.png"}
+                    src={"/assets/images/contact-circle.png"}
                     alt={"contact-circle"}
                     className='circle'
                     width={56}

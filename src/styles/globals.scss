@@ -41,13 +41,13 @@ h4 {
 
 h5 {
     font-size: 18px;
-    font-weight: bold !important;
+    font-weight: bold;
     color: #939393;
 }
 
 h6 {
     font-size: 14px;
-    font-weight: bold !important;
+    font-weight: bold;
     color: #000;
 }
 
@@ -77,13 +77,19 @@ header {
         align-items: center;
 
         .logo-first {
+            font-size: 22px;
             font-weight: 800;
+        }
+
+        .logo-second {
+            font-size: 20px;
+            font-weight: 500;
         }
     }
 }
 
 .home-section {
-    background-image: url("/images/homepage/bg.png");
+    background-image: url("/assets/images/homepage/bg.png");
     position: relative;
     z-index: 1;
     background-repeat: no-repeat;
@@ -166,7 +172,7 @@ header {
 
     .input-bg {
         position: absolute;
-        background-image: url("/images/input-bg.png");
+        background-image: url("/assets/images/input-bg.png");
         z-index: -1;
         top: 0;
         left: 0;
